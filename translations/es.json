@@ -9,14 +9,14 @@
     "login": "Log In"
   },
   "header": {
-    "text1": "Utopian.io",
+    "text1": "Blurtopian.com",
     "text2": "Economía de Código Abierto",
     "text3": "¡Gana recompensas al contribuir en tus Proyectos de Código Abierto favoritos <br>!"
   },
   "intro": "Nuestro mundo moderno se encuentra impulsado por software de <a href='https://en.wikipedia.org/wiki/Open-source_model'>Código Abierto</a>. Este se ejecuta en cada equipo, smartphone o tablet, y todas tus aplicaciones favoritas no podrían funcionar sin él. Voluntarios y entusiastas alrededor del mundo son los que principalmente ayudan a desarrollarlo, incluidos los geeks entre tus amigos que aman más a sus computadoras que salir contigo. El software de Código Abierto es una propiedad común y libre, que permite a todos utilizarlo y modificarlo a sus necesidades. Se basa en la inteligencia colectiva en lugar de las normas impuestas por otros. ¡Todo este trabajo se hace gratis! Sin embargo, Utopian recompensa a quienes contribuyen en este tipo de proyectos, siempre y cuando se alcancen ciertos estándares de calidad.",
   "octocat": {
     "hi": "¡Hola! ¡Yo soy Octocat!",
-    "text": "¡Trabajo en GitHub,como una Mascota! Este es un buen lugar para estar. Somos una comunidad mundial de entusiastas y voluntarios, que trabajan juntos en miles de proyectos interesantes. <b>Utopian.io</b> les recompensa por hacer contribuciones a proyectos de Código Abierto, como corrección de errores, traducción de textos, escribir documentación, compartir buenas ideas y mucho más.",
+    "text": "¡Trabajo en GitHub,como una Mascota! Este es un buen lugar para estar. Somos una comunidad mundial de entusiastas y voluntarios, que trabajan juntos en miles de proyectos interesantes. <b>Blurtopian.com</b> les recompensa por hacer contribuciones a proyectos de Código Abierto, como corrección de errores, traducción de textos, escribir documentación, compartir buenas ideas y mucho más.",
     "visit": "¡Visita GitHub.com!"
   },
   "projects": {
@@ -75,7 +75,7 @@
   },
   "crowdsourcing": {
     "headline": "Utopian para Propietarios de Proyectos",
-    "text": "Con Utopian.io, podrás realizar <b>anuncios</b> para tus proyectos y obtener rápidamente crowdsourcing de un grupo internacional de talentos. Captar la atención de valiosos colaboradores y usar el poder de la inteligencia colectiva para desarrollar tus proyectos.",
+    "text": "Con Blurtopian.com, podrás realizar <b>anuncios</b> para tus proyectos y obtener rápidamente crowdsourcing de un grupo internacional de talentos. Captar la atención de valiosos colaboradores y usar el poder de la inteligencia colectiva para desarrollar tus proyectos.",
     "thinkers": {
       "headline": "Pensadores",
       "text": "Capta la atención de grandes pensadores en tu proyecto para desarrollar ideas y resolver problemas."
@@ -116,14 +116,14 @@
     "total_generated": "Total Generado",
     "steem": {
       "headline": "¿Quién paga las recompensas?",
-      "text": "Para pagar las recompensas, Utopian.io utiliza el <a href='https://steem.io/'> Steem blockchain</a>. El dinero es creado en la forma de una criptomoneda llamada <b>STEEM</b>, a través de la votación de la comunidad. Nadie tiene que pagar directamente las recompensas. Estas son generadas y distribuidas mediante un algoritmo llamado <i>Proof-of-Brain</i>, que estimula a los usuarios para que creen y hagan curación en contenidos de calidad. <br><br>En el caso de Utopian.io, su aportación al mundo del Código Abierto es la calidad del contenido. Al votar sus contribuciones, la comunidad crea dinero para recompensarle por su trabajo. Las personas también pueden optar por pagarse unos a otros utilizando directamente su propio STEEM, si ellos quieren, pero es algo opcional. <br><br>El valor del voto de un usuario se basa en su propia inversión en la plataforma, mientras más grande sea su participación, mayor valor tendrá el mismo al momento de la curación. Utopian.io podrá votar en sus contribuciones. Con más de <b>3 millones de Steem Power</b> delegado a la cuenta de la plataforma Utopian.io, un voto por su valor completo vale más que <b>250 dólares</b>, al precio corriente dentro del mercado. <br><br><a href='#faq'> Revise las preguntas frecuentes</a> para poder obtener más información.",
+      "text": "Para pagar las recompensas, Blurtopian.com utiliza el <a href='https://steem.io/'> Steem blockchain</a>. El dinero es creado en la forma de una criptomoneda llamada <b>STEEM</b>, a través de la votación de la comunidad. Nadie tiene que pagar directamente las recompensas. Estas son generadas y distribuidas mediante un algoritmo llamado <i>Proof-of-Brain</i>, que estimula a los usuarios para que creen y hagan curación en contenidos de calidad. <br><br>En el caso de Blurtopian.com, su aportación al mundo del Código Abierto es la calidad del contenido. Al votar sus contribuciones, la comunidad crea dinero para recompensarle por su trabajo. Las personas también pueden optar por pagarse unos a otros utilizando directamente su propio STEEM, si ellos quieren, pero es algo opcional. <br><br>El valor del voto de un usuario se basa en su propia inversión en la plataforma, mientras más grande sea su participación, mayor valor tendrá el mismo al momento de la curación. Blurtopian.com podrá votar en sus contribuciones. Con más de <b>3 millones de Steem Power</b> delegado a la cuenta de la plataforma Blurtopian.com, un voto por su valor completo vale más que <b>250 dólares</b>, al precio corriente dentro del mercado. <br><br><a href='#faq'> Revise las preguntas frecuentes</a> para poder obtener más información.",
       "button": "Conocer más acerca de Steem"
     }
   },
   "rules": {
     "step1": "¡Cumpla con<br>nuestras reglas!",
     "step2": "¡Será revisado por nuestros<br>moderadores!",
-    "step3": "¡Será votado por Utopian.io y la comunidad!",
+    "step3": "¡Será votado por Blurtopian.com y la comunidad!",
     "step4": "¡Se pagará<br>luego de 7 días!",
     "text": "Para asegurar la calidad, cada contribución es revisada por uno de nuestros moderadores, de acuerdo con nuestras reglas. El no respeto de estas reglas le hará conseguir recompensas inferiores o incluso hacer que su contribución no sea aceptada del todo. Sin embargo, si su aporte no es aceptado, todavía será publicado en el Blockchain de Steem, y podrá ganar recompensas. En este caso, estarás por tu cuenta. Utopian no recompensará ni compartirá su contribución.",
     "categories": {
@@ -240,7 +240,7 @@
       },
       "blog": {
         "headline": "Reglas para Publicaciones en el Blog",
-        "rule1": "Debes proporcionar un formato original. No publiques noticias encontradas en la web o pensamientos generales, a menos que tengas un único y consistente formato. <a href='https://utopian.io/utopian-io/@utopian-io/2xqdoa-utopian-weekly-1-the-weekly-open-source-newsletter'>Ejemplo de un buen formato</a>.",
+        "rule1": "Debes proporcionar un formato original. No publiques noticias encontradas en la web o pensamientos generales, a menos que tengas un único y consistente formato. <a href='https://blurtopian.com/utopian-io/@utopian-io/2xqdoa-utopian-weekly-1-the-weekly-open-source-newsletter'>Ejemplo de un buen formato</a>.",
         "rule2": "Solo puedes escribir publicaciones en el blog que estén relacionadas con <b>proyectos de código abierto</b> o con el <b>movimiento del código abierto</b> en general.",
         "rule3": "Las publicaciones en el blog deben proporcionar contenidos y descripciones detalladas de los proyectos de Código Abierto.",
         "rule4": "Imágenes, capturas de pantalla, enlaces y ejemplos no son necesarios, pero si recomendados.",

@@ -9,14 +9,14 @@
     "login": "Anmelden"
   },
   "header": {
-    "text1": "Utopian.io",
+    "text1": "Blurtopian.com",
     "text2": "Open Source Ökonomie",
     "text3": "Leiste Beiträge zu Open Source Projekten<br>und werde dafür bezahlt."
   },
-  "intro": "Unsere moderne Welt wäre ohne <a href='https://en.wikipedia.org/wiki/Open-source_model'>Open Source Software</a> undenkbar. Sie läuft auf jedem Computer, jedem Smartphone oder Tablet and all deine Lieblings-Apps kommen nicht ohne sie aus. Sie wird hauptsächlich von Freiwilligen auf der ganzen Welt entwickelt. Open Source software ist ein freies Allgemeingut und erlaubt jedem, sie zu benutzen und an die eigenen Bedürfnisse anzupassen. Sie basiert auf der Expertise einzelner und der Schwarmintelligenz einer riesigen Community anstatt auf Vorgaben von Vorgesetzen. All diese wertvolle Arbeit wird nicht bezahlt! Utopian.io ändert das und entlohnt jeden der zu solchen Projekten beiträgt, solange ein gewisser Qualitätsstandard eingehalten wird.",
+  "intro": "Unsere moderne Welt wäre ohne <a href='https://en.wikipedia.org/wiki/Open-source_model'>Open Source Software</a> undenkbar. Sie läuft auf jedem Computer, jedem Smartphone oder Tablet and all deine Lieblings-Apps kommen nicht ohne sie aus. Sie wird hauptsächlich von Freiwilligen auf der ganzen Welt entwickelt. Open Source software ist ein freies Allgemeingut und erlaubt jedem, sie zu benutzen und an die eigenen Bedürfnisse anzupassen. Sie basiert auf der Expertise einzelner und der Schwarmintelligenz einer riesigen Community anstatt auf Vorgaben von Vorgesetzen. All diese wertvolle Arbeit wird nicht bezahlt! Blurtopian.com ändert das und entlohnt jeden der zu solchen Projekten beiträgt, solange ein gewisser Qualitätsstandard eingehalten wird.",
   "octocat": {
     "hi": "Hi! Ich bin Octocat!",
-    "text": "Ich arbeite bei GitHub als Maskottchen und es ist wirklich großartig hier zu sein! Wir sind eine weltweit verteilte Gemeinschaft von freiwilligen Enthusiasten, die an tausenden von interessanten Projekten arbeiten. Dank <b>Utopian.io</b> wird nun jeder, der einen wertvollen Beitrag zu Open Source Projekten leistet, auch dafür bezahlt. Du kannst z.B. Fehlerberichte verfassen, Texte übersetzen, Dokumentationen und Tutorials schreiben oder einfach deine Ideen und Vorschläge mit der Community teilen.",
+    "text": "Ich arbeite bei GitHub als Maskottchen und es ist wirklich großartig hier zu sein! Wir sind eine weltweit verteilte Gemeinschaft von freiwilligen Enthusiasten, die an tausenden von interessanten Projekten arbeiten. Dank <b>Blurtopian.com</b> wird nun jeder, der einen wertvollen Beitrag zu Open Source Projekten leistet, auch dafür bezahlt. Du kannst z.B. Fehlerberichte verfassen, Texte übersetzen, Dokumentationen und Tutorials schreiben oder einfach deine Ideen und Vorschläge mit der Community teilen.",
     "visit": "Besuche GitHub.com!"
   },
   "projects": {
@@ -75,7 +75,7 @@
   },
   "crowdsourcing": {
     "headline": "Utopian für Projektleiter",
-    "text": "Mit Utopian.io kannst du <b>Ankündigungen</b> für dein Projekt machen und Aufgaben schnell und einfach an einen internationalen Talentpool crowdsourcen. Mache auf dein Projekt aufmerksam, knüpfe wertvolle Kontakte und nutze die kollegtive Intelligenz für die Entwicklung deines Projekts.",
+    "text": "Mit Blurtopian.com kannst du <b>Ankündigungen</b> für dein Projekt machen und Aufgaben schnell und einfach an einen internationalen Talentpool crowdsourcen. Mache auf dein Projekt aufmerksam, knüpfe wertvolle Kontakte und nutze die kollegtive Intelligenz für die Entwicklung deines Projekts.",
     "thinkers": {
       "headline": "Denker",
       "text": "Nutze die das Wissen von Experten, die dir dabei helfen Iden zu entwickeln und Probleme zu lösen."
@@ -116,14 +116,14 @@
     "total_generated": "Insgesamt generiert",
     "steem": {
       "headline": "Wer bezahlt das Geld?",
-      "text": "To pay the rewards, Utopian.io uses the <a href='https://steem.io/'>Steem blockchain</a>. The money is created in the form of a cryptocurrency called <b>STEEM</b>, through community voting. Nobody has to pay for the rewards directly. They are generated and distributed using an algorithm called <i>Proof-of-Brain</i>, which encourages people to create and curate quality content.<br><br>In the case of Utopian.io, your contributions to the Open Source world are the quality content. By upvoting your contributions, the community creates money to reward you for your work. People can also choose to pay each other directly using their own STEEM, if they want to, but it's optional.<br><br>The worth of a user's vote is based on his/her own investment in the platform and the larger their stake, the more their vote is worth when curating. Utopian.io itself can vote on your contributions. Over <b>3 million Steem Power</b> was delegated to the Utopian.io platform's account, making its full vote worth more than <b>$250</b>, at current market prices.<br><br><a href='#faq'>Check the FAQs</a> for more information.",
+      "text": "To pay the rewards, Blurtopian.com uses the <a href='https://steem.io/'>Steem blockchain</a>. The money is created in the form of a cryptocurrency called <b>STEEM</b>, through community voting. Nobody has to pay for the rewards directly. They are generated and distributed using an algorithm called <i>Proof-of-Brain</i>, which encourages people to create and curate quality content.<br><br>In the case of Blurtopian.com, your contributions to the Open Source world are the quality content. By upvoting your contributions, the community creates money to reward you for your work. People can also choose to pay each other directly using their own STEEM, if they want to, but it's optional.<br><br>The worth of a user's vote is based on his/her own investment in the platform and the larger their stake, the more their vote is worth when curating. Blurtopian.com itself can vote on your contributions. Over <b>3 million Steem Power</b> was delegated to the Blurtopian.com platform's account, making its full vote worth more than <b>$250</b>, at current market prices.<br><br><a href='#faq'>Check the FAQs</a> for more information.",
       "button": "Lerne mehr über Steem"
     }
   },
   "rules": {
     "step1": "Halte dich<br>an unsere Regeln!",
     "step2": "Moderatoren überprüfen<br>deine Einreichung!",
-    "step3": "Utopian.io und die Community bewerten deine Arbeit!",
+    "step3": "Blurtopian.com und die Community bewerten deine Arbeit!",
     "step4": "Werde nach 7<br>Tagen bezahlt!",
     "text": "To ensure quality, each contribution is reviewed by one of our moderators, according to our rules. Not respecting these rules will either get you lower rewards or stop your contribution from being accepted at all. However, if your contribution is not accepted, it will still be published on the Steem blockchain, and it can earn rewards. In that case, you will be on your own. Utopian will not reward your contribution nor share it.",
     "categories": {
@@ -240,7 +240,7 @@
       },
       "blog": {
         "headline": "Blog Post Rules",
-        "rule1": "You must provide an original format/s. You can't post about news found in the web or general thoughts, unless you have a unique and consistent format. <a href='https://utopian.io/utopian-io/@utopian-io/2xqdoa-utopian-weekly-1-the-weekly-open-source-newsletter'>Example of a good format</a>.",
+        "rule1": "You must provide an original format/s. You can't post about news found in the web or general thoughts, unless you have a unique and consistent format. <a href='https://blurtopian.com/utopian-io/@utopian-io/2xqdoa-utopian-weekly-1-the-weekly-open-source-newsletter'>Example of a good format</a>.",
         "rule2": "You may only write blog posts that are related to <b>open-source projects</b> or the <b>open-source movement</b> in general.",
         "rule3": "Blog posts must provide detailed content and overviews related to the open-source projects.",
         "rule4": "Images, screenshots, links and examples are not necessary but preferred.",

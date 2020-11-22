@@ -221,7 +221,7 @@ let app = new Vue({
                 contributionsContainer.slick('slickRemove', null, null, true);
                 contributionsContainer.find('.slick-dots').css('display', 'none');
                 $.ajax({
-                  url: 'https://api.utopian.io/api/posts/?limit=10&section=project&sortBy=votes&platform=github&projectId=' + $(slick.$slides[nextSlide]).data('githubid'),
+                  url: 'https://api.blurtopian.com/api/posts/?limit=10&section=project&sortBy=votes&platform=github&projectId=' + $(slick.$slides[nextSlide]).data('githubid'),
                   success: (data) => {
                     let contributions = data.results;
                     for (let i = 0; i < contributions.length; i++) {
@@ -251,7 +251,7 @@ let app = new Vue({
 
           // contributions
           $.ajax({
-            url: 'https://api.utopian.io/api/posts/?limit=10&section=project&sortBy=votes&platform=github&projectId=' + projects[0].github.id,
+            url: 'https://api.blurtopian.com/api/posts/?limit=10&section=project&sortBy=votes&platform=github&projectId=' + projects[0].github.id,
             success: (data) => {
               let contributions = data.results;
 
@@ -296,7 +296,7 @@ let app = new Vue({
           });
         }
       });
-      
+
       function getContributionHtml(contribution) {
         let categoryLabel = '',
             icon = '';
@@ -369,12 +369,12 @@ let app = new Vue({
     </div>
     <div class="user clearfix">
         <img class="profile-image" src="https://img.busy.org/@${contribution.author}?s=30"/>
-        <a class="username" href="https://utopian.io/@${contribution.author}">${contribution.author}</a>
+        <a class="username" href="https://blurtopian.com/@${contribution.author}">${contribution.author}</a>
         <span class="reputation">${calculateReputation(contribution.author_reputation)}</span>
         <span class="date">${moment.utc(contribution.created).from(moment.utc().format('YYYY-MM-DD HH:mm:ss'))}</span>
     </div>
     <div class="title">
-        <a href="https://utopian.io${contribution.url}">${contribution.title}</a>
+        <a href="https://blurtopian.com${contribution.url}">${contribution.title}</a>
     </div>
     <div class="stats clearfix">
         <div class="float-left mr-2">
@@ -383,10 +383,10 @@ let app = new Vue({
         </div>
         <div class="float-left">
             <i class="anticon icon-message1"></i>
-            ${contribution.children}        
+            ${contribution.children}
         </div>
         <div class="float-right">
-            $${getPostPayout(contribution)}        
+            $${getPostPayout(contribution)}
         </div>
     </div>
 </div></div>`;
@@ -394,7 +394,7 @@ let app = new Vue({
     },
     getRewards: function () {
       $.ajax({
-        url: 'https://api.utopian.io/api/stats',
+        url: 'https://api.blurtopian.com/api/stats',
         success: (data) => {
           let that = this;
           $({
@@ -421,7 +421,7 @@ let app = new Vue({
     },
     getModerators: function () {
       $.ajax({
-        url: 'https://api.utopian.io/api/moderators',
+        url: 'https://api.blurtopian.com/api/moderators',
         success: (data) => {
           this.moderators = data.results;
           for (let i = 0; i < this.moderators.length; i++) {

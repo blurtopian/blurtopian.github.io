@@ -191,7 +191,7 @@ var app = new Vue({
                 contributionsContainer.slick('slickRemove', null, null, true);
                 contributionsContainer.find('.slick-dots').css('display', 'none');
                 $.ajax({
-                  url: 'https://api.utopian.io/api/posts/?limit=10&section=project&sortBy=votes&platform=github&projectId=' + $(slick.$slides[nextSlide]).data('githubid'),
+                  url: 'https://api.blurtopian.com/api/posts/?limit=10&section=project&sortBy=votes&platform=github&projectId=' + $(slick.$slides[nextSlide]).data('githubid'),
                   success: function success(data) {
                     var contributions = data.results;
                     for (var i = 0; i < contributions.length; i++) {
@@ -218,7 +218,7 @@ var app = new Vue({
 
           // contributions
           $.ajax({
-            url: 'https://api.utopian.io/api/posts/?limit=10&section=project&sortBy=votes&platform=github&projectId=' + projects[0].github.id,
+            url: 'https://api.blurtopian.com/api/posts/?limit=10&section=project&sortBy=votes&platform=github&projectId=' + projects[0].github.id,
             success: function success(data) {
               var contributions = data.results;
 
@@ -320,14 +320,14 @@ var app = new Vue({
           categoryLabel += ' Request';
         }
 
-        return '<div class="contribution"><div class="contribution-inner">\n    <div class="category ' + contribution.json_metadata.type + '">\n        <i class="anticon icon-' + icon + '"></i>\n        ' + categoryLabel + '\n    </div>\n    <div class="user clearfix">\n        <img class="profile-image" src="https://img.busy.org/@' + contribution.author + '?s=30"/>\n        <a class="username" href="https://utopian.io/@' + contribution.author + '">' + contribution.author + '</a>\n        <span class="reputation">' + calculateReputation(contribution.author_reputation) + '</span>\n        <span class="date">' + moment.utc(contribution.created).from(moment.utc().format('YYYY-MM-DD HH:mm:ss')) + '</span>\n    </div>\n    <div class="title">\n        <a href="https://utopian.io' + contribution.url + '">' + contribution.title + '</a>\n    </div>\n    <div class="stats clearfix">\n        <div class="float-left mr-2">\n            <i class="anticon icon-like1"></i>\n            ' + contribution.net_votes + '\n        </div>\n        <div class="float-left">\n            <i class="anticon icon-message1"></i>\n            ' + contribution.children + '        \n        </div>\n        <div class="float-right">\n            $' + getPostPayout(contribution) + '        \n        </div>\n    </div>\n</div></div>';
+        return '<div class="contribution"><div class="contribution-inner">\n    <div class="category ' + contribution.json_metadata.type + '">\n        <i class="anticon icon-' + icon + '"></i>\n        ' + categoryLabel + '\n    </div>\n    <div class="user clearfix">\n        <img class="profile-image" src="https://img.busy.org/@' + contribution.author + '?s=30"/>\n        <a class="username" href="https://blurtopian.com/@' + contribution.author + '">' + contribution.author + '</a>\n        <span class="reputation">' + calculateReputation(contribution.author_reputation) + '</span>\n        <span class="date">' + moment.utc(contribution.created).from(moment.utc().format('YYYY-MM-DD HH:mm:ss')) + '</span>\n    </div>\n    <div class="title">\n        <a href="https://blurtopian.com' + contribution.url + '">' + contribution.title + '</a>\n    </div>\n    <div class="stats clearfix">\n        <div class="float-left mr-2">\n            <i class="anticon icon-like1"></i>\n            ' + contribution.net_votes + '\n        </div>\n        <div class="float-left">\n            <i class="anticon icon-message1"></i>\n            ' + contribution.children + '        \n        </div>\n        <div class="float-right">\n            $' + getPostPayout(contribution) + '        \n        </div>\n    </div>\n</div></div>';
       }
     },
     getRewards: function getRewards() {
       var _this2 = this;
 
       $.ajax({
-        url: 'https://api.utopian.io/api/stats',
+        url: 'https://api.blurtopian.com/api/stats',
         success: function success(data) {
           var that = _this2;
           $({
@@ -356,7 +356,7 @@ var app = new Vue({
       var _this3 = this;
 
       $.ajax({
-        url: 'https://api.utopian.io/api/moderators',
+        url: 'https://api.blurtopian.com/api/moderators',
         success: function success(data) {
           _this3.moderators = data.results;
           for (var i = 0; i < _this3.moderators.length; i++) {
