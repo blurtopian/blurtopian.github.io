@@ -1,0 +1,292 @@
+{
+  "nav": {
+    "rewards": "Rewards",
+    "rules": "Rules",
+    "moderators": "Moderators",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "signup": "Sign Up",
+    "login": "Log In"
+  },
+  "header": {
+    "text1": "Utopian.io",
+    "text2": "Open Source Economy",
+    "text3": "Earn rewards by contributing to your<br>favorite Open Source projects!"
+  },
+  "intro": "Our modern world is driven by <a href='https://en.wikipedia.org/wiki/Open-source_model'>Open Source</a> software. It runs on every computer, every smartphone or tablet and all your favorite apps would not run without it. It is developed mainly by volunteers and by hobbyists around the world, those geeks among your friends that love their computers more than hanging out with you. Open Source software is free and common property and allows everyone to use it and alter it to their needs. It relies on collective intelligence instead of the standards imposed by superiors. All this work is done for free! Utopian however rewards everyone who contributes to such projects, as long as a certain standard of quality is met.",
+  "octocat": {
+    "hi": "Hi! I'm Octocat!",
+    "text": "I work at GitHub, as a Mascot! It's a very great place to be. We are a world-spanning community of enthusiasts and volunteers, working together on thousands of cool projects. <b>Utopian.io</b> rewards you for making contributions to Open Source projects, like fixing bugs, translating texts, writing documentation or sharing good ideas and more.",
+    "visit": "Visit GitHub.com!"
+  },
+  "projects": {
+    "headline": "Choose a project..."
+  },
+  "contribute": {
+    "headline": "...and contribute!",
+    "suggestions": {
+      "headline": "Suggestions",
+      "text": "Everything starts with an idea. Share your ideas or minor feature requests and help improve a project."
+    },
+    "subprojects": {
+      "headline": "Sub-Projects",
+      "text": "Share new and more elaborate features or concepts that you have developed for a project."
+    },
+    "development": {
+      "headline": "Development",
+      "text": "If you've written code and created pull requests, share your work with the Utopian community."
+    },
+    "bughunting": {
+      "headline": "Bug Hunting",
+      "text": "Help developers find and fix problems with their software by sharing detailed bug reports."
+    },
+    "translation": {
+      "headline": "Translation",
+      "text": "Help people use software in other languages by translating text or documentation via <a href='https://crowdin.com/' target='_blank'>Crowdin</a> and other tools."
+    },
+    "graphics": {
+      "headline": "Graphics",
+      "text": "Share original logos, icons, backgrounds and other graphics that you have designed for a project."
+    },
+    "documentation": {
+      "headline": "Documentation",
+      "text": "If you have authored documentation for a project (in any language), you can share it with the community."
+    },
+    "analysis": {
+      "headline": "Analysis",
+      "text": "Maybe you've analyzed a particular project's data set and extracted useful information from it. You can share it with the community too."
+    },
+    "visibility": {
+      "headline": "Visibility",
+      "text": "Marketing efforts can also be rewarded through Utopian as well. Tell the community what you've done to promote an Open Source project."
+    },
+    "tutorials": {
+      "headline": "Tutorials",
+      "text": "Write informative tutorials and help other people to use Open Source products."
+    },
+    "videotutorials": {
+      "headline": "Video Tutorials",
+      "text": "Create how-to videos for an Open Source product and help people learn how to use it."
+    },
+    "copywriting": {
+      "headline": "Copywriting",
+      "text": "Write engaging and informative copy for Open Source projects, and improve the strength of their brand."
+    }
+  },
+  "crowdsourcing": {
+    "headline": "Utopian for Project Owners",
+    "text": "With Utopian.io, you can make <b>announcements</b> for your projects and quickly crowdsource from an international talent pool. Get the attention of valuable contributors and use the power of collective intelligence to develop your projects.",
+    "thinkers": {
+      "headline": "Thinkers",
+      "text": "Get the attention of great thinkers on your project to develop ideas and solve problems."
+    },
+    "developers": {
+      "headline": "Developers",
+      "text": "Call on talented developers to write code or fix bugs."
+    },
+    "bughunters": {
+      "headline": "Bug Hunters",
+      "text": "Encourage users to report problems or invite them to try out new features you're developing."
+    },
+    "translators": {
+      "headline": "Translators",
+      "text": "Reach more people around the world by assigning translators to make your project available in multiple languages."
+    },
+    "designers": {
+      "headline": "Designers",
+      "text": "Have talented designers create unique graphics for your project or brand."
+    },
+    "writers": {
+      "headline": "Technical Writers",
+      "text": "Get comprehensive documentation created for your project that properly informs your users and other stakeholders."
+    },
+    "analysts": {
+      "headline": "Data Analysts",
+      "text": "Extract meaning from your generated data, discover trends and make informed decisions regarding your project through the help of data analysts."
+    },
+    "influencers": {
+      "headline": "Influencers",
+      "text": "Coordinate effective online or offline marketing with the help of influencers around the world and get your project the attention it deserves."
+    }
+  },
+  "rewards": {
+    "contributor_rewards": "Contributor Rewards",
+    "curator_rewards": "Curator Rewards",
+    "pending_rewards": "Pending Rewards",
+    "total_generated": "Total Generated",
+    "steem": {
+      "headline": "Who pays the rewards?",
+      "text": "To pay the rewards, Utopian.io uses the <a href='https://steem.io/'>Steem blockchain</a>. The money is created in the form of a cryptocurrency called <b>STEEM</b>, through community voting. Nobody has to pay for the rewards directly. They are generated and distributed using an algorithm called <i>Proof-of-Brain</i>, which encourages people to create and curate quality content.<br><br>In the case of Utopian.io, your contributions to the Open Source world are the quality content. By upvoting your contributions, the community creates money to reward you for your work. People can also choose to pay each other directly using their own STEEM, if they want to, but it's optional.<br><br>The worth of a user's vote is based on his/her own investment in the platform and the larger their stake, the more their vote is worth when curating. Utopian.io itself can vote on your contributions. Over <b>3 million Steem Power</b> was delegated to the Utopian.io platform's account, making its full vote worth more than <b>$250</b>, at current market prices.<br><br><a href='#faq'>Check the FAQs</a> for more information.",
+      "button": "Learn more about Steem"
+    }
+  },
+  "rules": {
+    "step1": "Abide by<br>our rules!",
+    "step2": "Get reviewed by our<br>moderators!",
+    "step3": "Get upvoted by Utopian.io and the community!",
+    "step4": "Get paid<br>after 7 days!",
+    "text": "To ensure quality, each contribution is reviewed by one of our moderators, according to our rules. Not respecting these rules will either get you lower rewards or stop your contribution from being accepted at all. However, if your contribution is not accepted, it will still be published on the Steem blockchain, and it can earn rewards. In that case, you will be on your own. Utopian will not reward your contribution nor share it.",
+    "categories": {
+      "suggestions": {
+        "headline": "Suggestion Rules",
+        "rule1": "Suggestions are minor features/enhancements that you would like to have in an Open Source project.",
+        "rule2": "Suggestions must provide sufficient details for the requested features to be actually built.",
+        "rule3": "Images, screenshots, links and examples are always welcome in this category.",
+        "rule4": "Never write about suggestions you have already shared before or suggestions already shared by someone else."
+      },
+      "subprojects": {
+        "headline": "Sub-Project Rules",
+        "rule1": "A Sub-Project is a set of new, unseen features having a great impact on the project.",
+        "rule2": "Sub-Projects must provide comprehensive details of the features to be actually built.",
+        "rule3": "Images, screenshots, links, flows, mockups and examples are always mandatory in this category.",
+        "rule4": "In this category, quality of the content is the main factor for being accepted in Utopian.",
+        "rule5": "If you believe your idea does not qualify as a Sub-Project, use the Suggestions category instead.",
+        "rule6": "Never write about projects you have already shared before or projects already shared by someone else."
+      },
+      "development": {
+        "headline": "Development Rules",
+        "rule1": "Only merged Pull Requests will be accepted or Open Source projects you maintain never posted on Utopian before, forks included as long as the fork is not just a mirror of the original one. Proof of work required.",
+        "rule2": "In this category, you can only write if you have developed or contributed code to the development of a project.",
+        "rule3": "You must provide links to the branches, forks, gists or pull requests.",
+        "rule4": "If your username on Github is not the same as your Utopian username, you must prove that you are the account owner by providing a screenshot of the logged in session in Github.",
+        "rule5": "Images, screenshots, links and examples are not necessary but preferred.",
+        "rule6": "Never write about code contributions you have already shared before."
+      },
+      "bughunting": {
+        "headline": "Bug Hunting Rules",
+        "rule1": "Only use this category to report bugs you have found in an Open Source project.",
+        "rule2": "You must provide all possible details required to reproduce the bug.",
+        "rule3": "You must include, for example: browsers used, device types, operating systems and similar details.",
+        "rule4": "Never report bugs that have already been shared before, by you or someone else."
+      },
+      "translation": {
+        "headline": "Translation Rules",
+        "rule1": "In order to submit a translation in Utopian you must have translated at least 30% of the project for medium sized projects (500-1000 strings), 10-15% for big projects (1000 and up), 100% for small projects (1 - 500).",
+        "rule2": "Use this category only for translations you have authored or updated for an Open Source project.",
+        "rule3": "You must either include your entire translated text in the post or include public links to the full versions.",
+        "rule4": "Include as much detail as possible, to check the translations and the tools you have used to translate.",
+        "rule5": "Entire translations are always preferred. If you are writing about a partial translation, we reserve the right to evaluate the actual work.",
+        "rule6": "You must be the author of the translation and provide a way to verify your work.",
+        "rule7": "If your username on CrowdIn or similar translation platforms is not the same as your Utopian username, you must prove that you own the account by providing a screenshot of the logged in session on that translation platform.",
+        "rule8": "Never submit translations that have already been shared, by you or someone else."
+      },
+      "graphics": {
+        "headline": "Graphics Rules",
+        "rule1": "We reserve the right to reject a graphic contribution if we believe the work is not enough to be rewarded.",
+        "rule2": "In this category, only submit graphics like logos, icons, backgrounds, videos or animations that you have created for an Open Source project.",
+        "rule3": "You must include samples of your creations directly in your post and public links to the complete designs.",
+        "rule4": "You must give as much detail as possible to verify the work you did.",
+        "rule5": "You must provide the editable source files (such as .psd .ai .eps .svg .cdr).",
+        "rule6": "T-shirts and merchandising designs in general are not welcome, unless explicitly requested by the project owner.",
+        "rule7": "Never post about graphics that have been shared before, by you or someone else."
+      },
+      "analysis": {
+        "headline": "Analysis Rules",
+        "rule1": "This category is only for analysis that you have prepared for an Open Source project.",
+        "rule2": "You must include detailed results and explain the reasons behind them.",
+        "rule3": "If you are not posting your analysis in its entirety here, you must provide public links to full versions of it.",
+        "rule4": "Results of the analysis, in the form of charts or tables, are mandatory in this category.",
+        "rule5": "Never submit analysis that has been shared before, by you or someone else."
+      },
+      "visibility": {
+        "headline": "Visibility Rules",
+        "rule1": "In this category, submit the results of marketing efforts you made to improve the visibility of an Open Source project; such as social media campaigns, advertising, conferences or meetups.",
+        "rule2": "You must provide links, images or videos with proof of your efforts, and also share the results.",
+        "rule3": "If your efforts brought just a few or zero new users/contributors to the Open Source project, you should not write about it.",
+        "rule4": "You must prove your identity. If your Utopian username is not the same as the username on the platforms you used for marketing the project, you must provide screenshots of a logged in session on these platforms.",
+        "rule5": "Never write about visibility efforts you have already shared before."
+      },
+      "documentation": {
+        "headline": "Documentation Rules",
+        "rule1": "Only merged Pull Requests on the official repository will be accepted or on a fork as long as long as the fork is not just a mirror of the original one. Proof of work required.",
+        "rule2": "Submit to this category only when you're working on the Official Documentation of an Open Source project.",
+        "rule3": "You must be the author of either the entire documentation or of the changes/enhancements being applied to the documentation.",
+        "rule4": "Only official project documentation work can be submitted in this category. Use the Tutorials category for any other documentation.",
+        "rule5": "If you are not posting the complete content you authored, then you must provide public links to it.",
+        "rule6": "You must provide sufficient proof of the work you've done.",
+        "rule7": "If applicable, link to pull requests you have submitted on GitHub that contain your work.",
+        "rule8": "Never submit documentation work that you have already shared in the past."
+      },
+      "tutorials": {
+        "headline": "Tutorial Rules",
+        "rule1": "Machine translated tutorials will be rejected.",
+        "rule2": "This category is only for providing tutorials for an Open Source project.",
+        "rule3": "Tutorials can be in any language.",
+        "rule4": "A text intro in English is always mandatory, at the top of the post.",
+        "rule5": "If your tutorial also contains a video, you should use the Video Tutorials category instead.",
+        "rule6": "You must be the author of the tutorial.",
+        "rule7": "If you are not posting the entire tutorial here, you must provide public links to full versions of it.",
+        "rule8": "Never post tutorials you have already shared before on the Steem blockchain in general."
+      },
+      "videotutorials": {
+        "headline": "Video Tutorial Rules",
+        "rule1": "Video Tutorials using machine voice will be rejected.",
+        "rule2": "This category is only for providing video tutorials for an Open Source project.",
+        "rule3": "Video Tutorials can be in any language.",
+        "rule4": "A text intro in English is always mandatory, at the top of the post.",
+        "rule5": "You must be the author of the video tutorial.",
+        "rule6": "You must embed the video directly in the post. At the moment, YouTube videos are mandatory.",
+        "rule7": "Never post video tutorials you have already shared before on the Steem blockchain in general."
+      },
+      "copywriting": {
+        "headline": "Copywriting Rules",
+        "rule1": "Only merged Pull Requests will be accepted on the official repository or on a fork as long as long as the fork is not just a mirror of the original one. Proof of work required.",
+        "rule2": "Use this category only to show copywriting work that you have completed for an Open Source project.",
+        "rule3": "Copywriting can be in any language.",
+        "rule4": "A text intro in English is always mandatory, at the top of the post.",
+        "rule5": "You must be the author.",
+        "rule6": "If applicable, link to pull requests you have submitted on GitHub that contain your work.",
+        "rule7": "Never post copywriting work that you have already shared before."
+      },
+      "blog": {
+        "headline": "Blog Post Rules",
+        "rule1": "You must provide an original format/s. You can't post about news found in the web or general thoughts, unless you have a unique and consistent format. <a href='https://utopian.io/utopian-io/@utopian-io/2xqdoa-utopian-weekly-1-the-weekly-open-source-newsletter'>Example of a good format</a>.",
+        "rule2": "You may only write blog posts that are related to <b>open-source projects</b> or the <b>open-source movement</b> in general.",
+        "rule3": "Blog posts must provide detailed content and overviews related to the open-source projects.",
+        "rule4": "Images, screenshots, links and examples are not necessary but preferred.",
+        "rule5": "Check to make sure your post does not fit in other categories (e.g. Tutorials or Copywriting).",
+        "rule6": "Never write blog posts you have already shared before.",
+        "rule7": "We will be especially stringent for this category as we have seen abuse here in the past."
+      }
+    }
+  },
+  "moderators": {
+    "rewards": "Rewards",
+    "pending": "Pending",
+    "previous": "Previous",
+    "meet": "Meet our moderators",
+    "text": "On Utopian, all contributors are rewarded for their hard work, including our moderators, who ensure high quality standards are upheld on the platform.",
+    "pending_payout": "Pending Payout",
+    "previous_payout": "Previous Payout",
+    "text2": "5% of the total contributor rewards that are generated go to the Moderators based on the amount of contributions they have reviewed. To become an Utopian Moderator you must have high reputation and often review submitted contributions."
+  },
+  "faq": {
+    "q1": {
+      "headline": "1. What is Utopian?",
+      "text": "<p>Open Source software has always been associated with voluntary work by individuals across the world who don't necessarily get paid for all their hard work. This software runs on every device, website and application you can think of. It is often created by volunteers, hobbyists and enthusiasts who selflessly dedicate their time and effort to the cause.</p><p>Utopian is building an open source economy, in which the people who make valuable contributions to open source software projects get rewarded for their hard work. Built ontop of the Steem blockchain, Utopian uses the wisdom of the crowd to reward valuable contributions. Project owners and other contributors all get to decide how rewards are distributed through voting or liking individual contributions, and they also have the option to support contributors directly by paying them in a cryptocurrency called STEEM, which can easily be traded for other cryptocurrencies such as Bitcoin and Ethereum.</p>"
+    },
+    "q2": {
+      "headline": "2. What is Steem?",
+      "text": "<p>Steem is a next-generation blockchain that supports social media applications and their content. It uses a unique Proof-of-Brain mechanism that utilizes the wisdom of the crowd to reward people who make valuable contributions to their respective communities. Its native currency is called STEEM and it is the currency that Utopian contributors are rewarded in.</p><p><a href='https://steem.io'>Learn more about Steem</a></p>"
+    },
+    "q3": {
+      "headline": "3. Where do the rewards come from?",
+      "text": "<p>Steem's economic model allows for the creation of new tokens (or units of currency) at a predefined inflation rate of around 9.5% per year, going down by approximately 0.5% every year over the next twenty and a half years, until it reaches a 0.95% yearly inflation rate . These new tokens are distributed continuously to people performing actions deemed valuable by their communities through community voting. In the case of the Utopian community, as project owners, fellow contributors and other people with vested interests in open source software development \"upvote\" or \"like\" contributions, they have a say in how these new tokens are distributed, in direct relation to their stake in the Steem ecosystem (i.e. how much Steem Power they have). The more Steem Power they have, the more rewards they can give to contributors.</p><p>Contributors are able to redeem their rewards seven days after the post or contribution has been published.</p><p><a href='https://steem.io'>Learn more about the Steem ecosystem</a></p>"
+    },
+    "q4": {
+      "headline": "4. Where do I find my wallet?",
+      "text": "<p>All the STEEM you earn on Utopian is made available to your account when each individual post reaches its payout date, which is 7 days after you published it. At this time, the rewards are available for you to redeem to your account balance.</p><p>To see your account balance and to have access to your funds, you will need to go to <a href='https://steemit.com'>steemit.com</a>. There is a section named “Wallet” where you can see how much STEEM you own and also have the tools to transfer it, among other things. There is a mobile STEEM wallet app currently being developed by Steemit Inc. and once it is out, it will be the easiest way to manage your STEEM wallet.</p>"
+    },
+    "q5": {
+      "headline": "5. How do I cash in my STEEM?",
+      "text": "<p>Once you have some STEEM in your wallet, you can transfer it to a cryptocurrency exchange that supports STEEM like <a href='https://poloniex.com/'>Poloniex</a> or <a href='https://bittrex.com/'>Bittrex</a>. There you can exchange it for other cryptocurrencies like Bitcoin or Ethereum, which are easier to exchange for fiat (USD for example).</p><p>Or you can use <a href='https://blocktrades.us/'>Blocktrades</a>, which is integrated into the Steemit wallet interface. Just click your STEEM balance and a dropdown menu will appear. Then click “Sell” and you'll be taken to Blocktrades.</p>"
+    },
+    "q6": {
+      "headline": "6. How do I earn more rewards?",
+      "text": "<p>Quality is what matters most on Utopian. The community appreciates useful contributions that solve problems and move projects forward, so quality contributions will get noticed and rewarded. Always submitting your best work is the surest way to position yourself to earn more for your contributions.</p>"
+    }
+  },
+  "blog": {
+    "readmore": "read more on steemit.com"
+  }
+}

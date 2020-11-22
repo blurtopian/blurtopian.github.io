@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Steemit.com",
+    "teaser": "The social application web front-end to the Steem Blockchain",
+    "image": "https://res.cloudinary.com/hpiynhbhq/image/upload/v1510152641/y4aytinzid1rnqrtlgyy.png",
+    "url": "https://utopian.io/project/steemit/condenser/github/59213335/all",
+    "github": {
+      "id": "59213335",
+      "url": "https://github.com/steemit/condenser"
+    }
+  },
+  {
+    "name": "Busy.org",
+    "teaser": "Blockchain-based social network where anyone can earn rewards",
+    "image": "https://res.cloudinary.com/hpiynhbhq/image/upload/v1510052188/occhlvtqan2qafwhikbv.png",
+    "url": "https://utopian.io/project/busyorg/busy/github/64382195/all",
+    "github": {
+      "id": "64382195",
+      "url": "https://github.com/busyorg/busy"
+    }
+  },
+  {
+    "name": "Utopian.io",
+    "teaser": "Open Source Economy powered by the Steem blockchain",
+    "image": "https://res.cloudinary.com/hpiynhbhq/image/upload/v1510150908/xx4shp2yiekby5d6sify.png",
+    "url": "https://utopian.io/project/utopian-io/utopian.io/github/104593314/all",
+    "github": {
+      "id": "104593314",
+      "url": "https://github.com/utopian-io/utopian.io"
+    }
+  },
+  {
+    "name": "Wordpress",
+    "teaser": "Most popular blogging platform and content management system.",
+    "image": "https://res.cloudinary.com/hpiynhbhq/image/upload/v1510151319/fgsq6dznr52ztmbxmxad.png",
+    "url": "https://utopian.io/project/WordPress/WordPress/github/2889328/all",
+    "github": {
+      "id": "2889328",
+      "url": "https://github.com/wordpress/wordpress"
+    }
+  },
+  {
+    "name": "D.Tube",
+    "teaser": "Blockchain-based social video platform where anyone can earn rewards",
+    "image": "https://res.cloudinary.com/hpiynhbhq/image/upload/v1510152015/a9dly7pdcwfgj4dr885n.png",
+    "url": "https://utopian.io/project/dtube/production/github/106749740/all",
+    "github": {
+      "id": "106749740",
+      "url": "https://github.com/dtube/production"
+    }
+  },
+  {
+    "name": "eSteem",
+    "teaser": "Native Android and iOS mobile application for Steem",
+    "image": "https://res.cloudinary.com/hpiynhbhq/image/upload/v1510152218/lyim8tnecy9fsgn2gnvw.png",
+    "url": "https://utopian.io/project/eSteemApp/esteem/github/63218416/all",
+    "github": {
+      "id": "63218416",
+      "url": "https://github.com/eSteemApp/esteem"
+    }
+  }
+]

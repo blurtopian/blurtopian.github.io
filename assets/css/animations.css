@@ -1,0 +1,23 @@
+@-webkit-keyframes GradientAnimation {
+  0% {
+    background-position: 0 0; }
+  50% {
+    background-position: 82% 100%; }
+  100% {
+    background-position: 19% 0; } }
+@-moz-keyframes GradientAnimation {
+  0% {
+    background-position: 0 0; }
+  50% {
+    background-position: 82% 100%; }
+  100% {
+    background-position: 19% 0; } }
+@keyframes GradientAnimation {
+  0% {
+    background-position: 0 0; }
+  50% {
+    background-position: 82% 100%; }
+  100% {
+    background-position: 19% 0; } }
+
+/*# sourceMappingURL=animations.css.map */

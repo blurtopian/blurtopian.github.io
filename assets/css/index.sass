@@ -1,0 +1,812 @@
+html, body
+  font-family: 'Open Sans', sans-serif
+  height: 100%
+*
+  outline: none
+
+a
+  outline: none
+  color: #9d3393
+  transition: color .3s ease
+  &:hover
+    color: #4a6aac
+    text-decoration: none
+
+[v-cloak]
+  display: none
+
+.btn
+  border-radius: 25px
+  &.btn-primary
+    background-color: #4a6aac
+    background-image: -webkit-linear-gradient(left, #4b7dc0 0%, #9d3393 50%, #4b7dc0 100%) !important
+    background-size: 200% 100%
+    border: none !important
+    padding: 0.7rem 1rem
+    transition: transform .3s ease, background-position 1s ease, background-color 1s ease
+    &:hover,
+    &:focus,
+    &:active,
+    &.pink
+      background-color: #9d3393 !important
+    &:hover,
+    &:focus,
+    &:active
+      background-size: 300% 100% !important
+      background-position: -100% 0 !important
+      transform: scale(1.05) !important
+
+  &.btn-light
+    border: solid 1px #ccc
+    color: #999
+    font-weight: bold
+    font-size: .8rem
+    background: #fff
+    background-size: 400% 100%
+    background-image: -webkit-linear-gradient(left, #999 0%, #999 25%, #4b7dc0 50%, #9d3393 75%, #999 100%) !important
+    -webkit-text-fill-color: transparent
+    -webkit-background-clip: text
+    transition: background-position .7s ease, border-color .3s ease
+    &:hover,
+    &:active,
+    &:focus
+      color: #4b7dc0 !important
+      background-position: -66% 0 !important
+      border-color: #4b7dc0 !important
+      .fa
+        -webkit-text-fill-color: #9d3393 !important
+    .fa
+      -webkit-text-fill-color: #999
+
+.slick-dots
+  li
+    &.slick-active
+      button
+        &:before
+          color: #9d3393
+          opacity: 1
+          transform: scale(2)
+          transition: transform .3s ease
+
+#navbar
+  font-size: 1rem
+  margin-top: 25px
+  padding-right: 10px
+  border-radius: 30px
+  transition: margin-top 1s ease, background-color .3s ease, box-shadow .3s ease
+
+  .navbar-brand
+    img
+      transition: width .3s ease
+      width: 70px
+  .navbar-toggler
+    padding-right: 10px
+    border: none
+
+  .navbar-nav
+    .nav-link
+      color: #fff
+      padding-left: 1rem
+      padding-right: 1rem
+      background-size: 400% 100%
+      background-image: -webkit-linear-gradient(left, #fff 0%, #fff 25%, #4b7dc0 50%, #9d3393 75%, #fff 100%)
+      -webkit-text-fill-color: transparent
+      -webkit-background-clip: text
+      transition: background-position .5s ease
+    .active > .nav-link,
+    .nav-link.active,
+    .nav-link.show,
+    .nav-link:focus,
+    .nav-link:hover,
+    .show > .nav-link
+      color: #4b7dc0
+      background-position: -66% 0
+
+  .text-right
+    #language
+      display: inline-block
+      margin-right: 15px
+      cursor: pointer
+      .dropdown-toggle
+        color: #fff
+        font-weight: normal
+        &:after
+          display: none
+      .dropdown-menu
+        min-width: 70px
+
+  &.scrolled
+    background: rgba(0, 0, 0, .8) !important
+    margin-top: 10px
+    .navbar-brand
+      img
+        width: 50px
+    &:hover
+      background: #252525 !important
+      box-shadow: 0 0 25px rgba(0, 0, 0, .2)
+
+#header
+  background: #252525
+  height: 768px
+  position: relative
+
+  #header-content
+    padding-top: 200px
+    h1
+      font-size: 4rem
+
+  .parallax-wave
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    width: 100%
+    background-color: transparent
+    background-size: cover
+    background-position: 0 0
+    background-repeat: repeat-x
+
+    &#wave-grey1
+      bottom: 100px
+      height: 290px
+      background-image: url('../img/wave-grey1.png')
+      filter: blur(.3px)
+    &#wave-grey2
+      bottom: 100px
+      height: 482px
+      background-image: url('../img/wave-grey2.png')
+    &#wave-white
+      bottom: -1px
+      height: 367px
+      background-image: url('../img/wave-white.png')
+
+#screen
+  margin-top: -300px
+  position: relative
+  z-index: 99
+  img
+    width: 500px
+    max-width: 100%
+  .play-video
+    width: 80px
+    height: 80px
+    line-height: 80px
+    text-align: center
+    background-image: -webkit-linear-gradient(left, #4b7dc0 0%, #9d3393 100%)
+    border-radius: 50%
+    color: #fff
+    position: absolute
+    top: 43%
+    left: 50%
+    margin-left: -40px
+    margin-top: -40px
+    box-shadow: 0 0 25px rgba(0, 0, 0, .5)
+    transition: transform .3s ease
+    .fa-play
+      transform: scale(3)
+      margin-left: 5px
+    &:hover
+      transform: scale(1.1)
+
+#intro
+  margin: 50px auto
+  columns: 2
+  z-index: 99
+  position: relative
+
+#github
+  margin-top: 100px
+  margin-bottom: 50px
+  #octocat
+    width: 100%
+    max-width: 250px
+  #github-text
+    font-size: 1.3rem
+    position: relative
+    background-color: #f8f8f8
+    color: #444
+    border-radius: 50px
+    z-index: 100
+    padding: 25px
+    box-shadow: 0 0 50px rgba(0, 0, 0, .1)
+    border: solid 1px #fff
+    &:before
+      content: ' '
+      width: 0
+      height: 0
+      border-top: 35px solid transparent
+      border-bottom: 35px solid transparent
+      border-right: 35px solid #f8f8f8
+      position: absolute
+      top: 50px
+      left: -34px
+
+#projects
+  h3
+    font-size: 3em
+    margin-top: 100px
+    position: relative
+
+  #projects-container
+    .slick-list
+      padding: 50px 50px !important
+      .slick-track
+        .project
+          margin: 35px 0
+          border-radius: 10px
+          position: relative
+          display: block
+          padding: 10px
+          z-index: 5
+          transition: transform .3s ease, box-shadow .3s ease
+          background: #fff
+          .cover-image
+            width: 100%
+          h4
+            font-size: 1.3rem
+            color: #444
+            margin-top: 15px
+          p
+            font-size: 1rem
+            color: #aaa
+            margin: 0
+          .btn
+            display: block
+            margin: 10px 0 0
+          .contributions
+            .contribution
+              margin-bottom: 10px
+              .profile-image
+                float: left
+                margin-right: 10px
+                img
+                  border-radius: 50%
+                  border: solid 1px #ddd
+              .title
+                color: #444
+                display: block
+                font-size: .8rem
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
+              .meta
+                display: block
+                font-size: 0.7rem
+                color: #aaa !important
+          &.slick-current
+            z-index: 6
+            transform: scale(1.15)
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2)
+    .slick-arrow
+      height: 100%
+      width: 25%
+      z-index: 10
+      &:before
+        color: #888
+        opacity: 0
+        font-size: 4rem
+        font-family: 'FontAwesome'
+        transition: opacity .3s ease
+        position: absolute
+        top: 50%
+      &:hover
+        &:before
+          opacity: 1
+      &.slick-prev
+        background-image: -webkit-linear-gradient(left, #fff 0%, transparent 100%)
+        left: 0
+        &:before
+          left: 25px
+          content: '\f104'
+      &.slick-next
+        background-image: -webkit-linear-gradient(left, transparent 0%, #fff 100%)
+        right: 0
+        &:before
+          right: 25px
+          content: '\f105'
+    &:hover
+      .slick-arrow
+        &:before
+          opacity: .5
+
+  #contributions-loader
+    position: relative
+    z-index: 25
+    text-align: center
+    padding: 100px
+    opacity: 0
+    .anticon
+      font-size: 3em
+
+  #contributions-container
+    position: relative
+    z-index: 50
+    min-height: 330px
+    margin-top: -250px
+    .slick-list
+      padding: 50px 50px 0 !important
+      .contribution
+        position: relative
+        margin: 10px
+        .contribution-inner
+          border-radius: 4px
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0.1)
+          .category
+            border-top-left-radius: 4px
+            border-top-right-radius: 4px
+            padding: 10px
+            color: #fff
+            &.ideas,
+            &.task-ideas
+              background: #54d2a0
+            &.sub-projects,
+            &.task-sub-projects
+              background: #a0db8e
+            &.development,
+            &.task-development
+              background: #000
+            &.bug-hunting,
+            &.task-bug-hunting
+              background: #d9534f
+            &.translations,
+            &.task-translations
+              background: #ffce3d
+            &.graphics,
+            &.task-graphics
+              background: #F6A623
+            &.analysis,
+            &.task-analysis
+              background: #164265
+            &.social,
+            &.task-social
+              background: #7ec2f3
+            &.documentation,
+            &.task-documentation
+              color: #000
+              background: #fff
+              border-bottom: solid 1px #eee
+            &.tutorials,
+            &.task-tutorials
+              background: #782C51
+            &.video-tutorials,
+            &.task-video-tutorials
+              background: #EC3324
+            &.copywriting,
+            &.task-copywriting
+              background: #008080
+          .user
+            padding: 10px
+            .profile-image
+              border-radius: 50%
+              margin-right: 5px
+              float: left
+            .username
+              color: #4b7dc0
+              margin-right: 5px
+              float: left
+            .reputation
+              margin-right: 5px
+              margin-top: 2px
+              float: left
+              font-size: .8rem
+              background: #eee
+              border-radius: 4px
+              padding: 0 5px
+            .date
+              margin-right: 5px
+              margin-top: 2px
+              float: left
+              color: #ccc
+              font-size: .8rem
+          .title
+            padding: 0 10px
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+            a
+              color: #333
+              font-weight: bold
+              transition: color .3s ease
+              &:hover
+                color: #4b7dc0
+          .stats
+            padding: 10px
+            color: #99aab5
+            font-weight: bold
+
+    .slick-arrow
+      height: 100%
+      width: 25%
+      z-index: 10
+      &:before
+        color: #888
+        opacity: 0
+        font-size: 4rem
+        font-family: 'FontAwesome'
+        transition: opacity .3s ease
+        position: absolute
+        top: 50%
+      &:hover
+        &:before
+          opacity: 1
+      &.slick-prev
+        background-image: -webkit-linear-gradient(left, #fff 0%, transparent 100%)
+        left: 0
+        &:before
+          left: 25px
+          content: '\f104'
+      &.slick-next
+        background-image: -webkit-linear-gradient(left, transparent 0%, #fff 100%)
+        right: 0
+        &:before
+          right: 25px
+          content: '\f105'
+    .slick-dots
+      bottom: auto
+      top: 10px
+    &:hover
+      .slick-arrow
+        &:before
+          opacity: .5
+
+#topics,
+#crowdsourcing
+  h3
+    font-size: 3em
+    margin-top: 100px
+    position: relative
+  .topic
+    position: relative
+    height: 100%
+
+    .image
+      width: 100%
+      height: 150px
+      background-position: center center
+      background-repeat: no-repeat
+      background-size: auto 80px
+      &:first-child
+        background-size: auto 110px
+    h4
+      font-size: 1.4rem
+    .button
+      position: absolute
+      bottom: 20px
+      text-align: center
+      left: 0
+      right: 0
+
+body
+  .carousel-control-prev,
+  .carousel-control-next
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    border: solid 1px #ddd
+    background: #fff
+    top: 50%
+    margin-top: -20px
+    color: #ccc !important
+    opacity: 1
+    transition: transform .3s
+    &:hover,
+    &:focus,
+    &:active
+      transform: scale(1.1)
+      color: #ccc
+  .carousel-control-prev
+    left: -10px
+  .carousel-control-next
+    right: -10px
+  .carousel
+    .carousel-inner
+      .card
+        border-radius: 50px
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.05)
+        border: solid 1px #fff
+        margin: 25px 0
+        .card-img-top
+          width: 59px
+
+.header
+  background-position: center center
+  background-size: cover
+  margin-top: 100px
+  padding: 70px 0
+
+  h2
+    margin-top: -100px
+    text-align: center
+    span
+      background-color: #4a6aac
+      background-image: -webkit-linear-gradient(left, #4b7dc0 0%, #9d3393 50%, #4b7dc0 100%)
+      background-size: 200% 100%
+      padding: 1rem 1.3rem
+      color: #fff
+      display: inline-block
+      margin: 0 auto
+      border: solid 5px #fff
+      border-radius: 25px
+      font-size: 1.5rem
+      font-weight: bold
+
+  a
+    color: #fff
+    text-decoration: none
+
+  .box
+    border-radius: 35px
+    background: rgba(255, 2555, 255, .1)
+    color: #fff
+    text-align: center
+    overflow: hidden
+
+    h3
+      font-size: 3rem
+      padding: 40px 0
+      margin: 0
+      img
+        width: 100%
+        max-width: 100px
+
+    .caption
+      background: rgba(255, 255, 255, 0.2)
+      margin: 0
+      padding: 15px
+
+.header-small
+  background-position: center center
+  background-size: cover
+  margin-top: 100px
+  padding: 70px 0 50px
+
+  h2
+    margin-top: -100px
+    text-align: center
+    background-image: -webkit-linear-gradient(left, #4b7dc0 0%, #9d3393 100%)
+    background-position: center center
+    background-size: 100% 2px
+    background-repeat: no-repeat
+    span
+      background-color: #4a6aac
+      background-image: -webkit-linear-gradient(left, #4b7dc0 0%, #9d3393 50%, #4b7dc0 100%)
+      background-size: 200% 100%
+      padding: 0.7rem 1rem
+      color: #fff
+      display: inline-block
+      margin: 0 auto
+      border: solid 5px #fff
+      border-radius: 25px
+      font-size: 1.5rem
+      font-weight: bold
+
+#rewards
+  .header
+    background-image: url('../img/rewards-bg.jpg')
+
+  #steem
+    margin-top: 50px
+    #steem-logo-container
+      position: relative
+      display: inline-block
+      &:after
+        content: ' '
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 60%
+        margin-left: 25%
+        height: 16px
+        background: rgba(0, 0, 0, 0.3)
+        border-radius: 50% / 8px
+        filter: blur(5px)
+      #steem-logo
+        width: 250px
+        max-width: 250px
+        position: relative
+        margin: 25px 25px 0
+      .upvote,
+      .dollar
+        position: absolute
+        bottom: 0
+        left: 0
+        color: #4b7dc0
+        background: #fff
+        border: solid 2px #4b7dc0
+        border-radius: 50%
+        width: 20px
+        height: 20px
+        line-height: 14px
+        opacity: .9
+      .dollar
+        font-size: 12px
+        line-height: 17px
+        color: #9d3393
+        border-color: #9d3393
+
+#rules
+  .header
+    background-image: url('../img/rules-bg.jpg')
+  #topic-rules
+    .carousel-item
+      padding-left: 50px
+      padding-right: 50px
+      .list-group-item
+        .fa-exclamation
+          font-size: 22px
+          margin-right: 8px
+          color: #9d3393
+
+#moderators
+  .header
+    color: #fff
+    background-image: url('../img/rules-bg.jpg')
+
+    .box
+      overflow: hidden
+      padding: 25px 0 0
+      .profile-image
+        border-radius: 50%
+        border: solid 2px #fff
+        background: #fff
+      h4
+        margin: 10px 0 20px
+      .social-links
+        img
+          width: 100%
+          max-width: 50px
+      .caption
+        .payout
+          font-size: 1.5rem
+          font-weight: 600
+        small
+          font-weight: 300
+          margin-top: -5px
+          display: block
+      .carousel-control-prev,
+      .carousel-control-next
+        width: 40px
+        height: 40px
+        background: #fff
+        border: none
+        margin-top: -20px
+      .carousel-control-prev
+        left: -20px
+        i
+          margin-right: -14px
+      .carousel-control-next
+        right: -20px
+        i
+          margin-left: -14px
+
+    h3
+      font-size: 3em
+
+#faq
+  #faq-accordion
+    .card
+      margin-bottom: 10px
+      overflow: hidden
+      .card-header
+        padding: 0
+        border-bottom: 0
+        a
+          display: block
+          padding: .75rem 1.25rem
+          color: #444
+          background-color: #fff
+          background-image: -webkit-linear-gradient(left, #fff 0%, #fff 25%, #4b7dc0 50%, #9d3393 75%, #fff 100%)
+          background-size: 400% 4px
+          background-repeat: repeat-x
+          background-position: 0 bottom
+          transition: background-position 1s ease, background-color 1s ease
+          &:hover,
+          &:focus
+            background-position: -66% bottom
+            text-decoration: none
+      .card-body
+        border-top: 1px solid rgba(0,0,0,.125)
+
+#blog
+  .blog-post
+    display: block
+    margin-bottom: 10px
+    padding: .75rem 1.25rem
+    color: #444
+    font-size: 1.25rem
+    border: 1px solid rgba(0,0,0,.125)
+    border-radius: 4px
+    background-color: #fff
+    background-image: -webkit-linear-gradient(left, #fff 0%, #fff 25%, #4b7dc0 50%, #9d3393 75%, #fff 100%)
+    background-size: 400% 4px
+    background-repeat: repeat-x
+    background-position: 0 bottom
+    transition: background-position 1s ease, background-color 1s ease
+    &:hover,
+    &:focus
+      background-position: -66% bottom
+      text-decoration: none
+    span
+      display: block
+      color: #aaa
+      font-size: 0.8rem
+
+footer
+  background: #333
+  color: #ccc
+  padding-bottom: 50px
+  text-align: center
+  .border-top
+    background-image: -webkit-linear-gradient(left, #4b7dc0 0%, #9d3393 100%)
+    height: 10px
+  .social-links
+    a
+      display: inline-block
+      margin: 50px 8px
+      img
+        width: 45px
+
+@media screen and (max-width: 991px)
+  #navbar
+    background: rgba(0, 0, 0, .8) !important
+    margin-top: 10px
+    .navbar-brand
+      img
+        width: 50px
+    &:hover
+      background: #252525 !important
+      box-shadow: 0 0 25px rgba(0, 0, 0, .2)
+
+  #header
+    #header-content
+      padding-top: 120px
+      h1
+        font-size: 3rem
+      h2
+        font-size: 1.5rem
+    .header
+      .box
+        margin-bottom: 25px
+
+@media screen and (max-width: 767px)
+  #header
+    #header-content
+      h1
+        font-size: 2.5rem
+      h2
+        font-size: 1rem
+
+  #intro
+    columns: 1
+
+  #github
+    #github-text
+      &:before
+        content: ' '
+        width: 0
+        height: 0
+        border-left: 35px solid transparent
+        border-right: 35px solid transparent
+        border-bottom: 35px solid #f2f2f2
+        position: absolute
+        top: -70px
+        left: 50%
+        margin-left: -35px
+
+@media screen and (max-width: 768px)
+  #projects
+    #projects-container
+      .slick-arrow
+        display: none !important
+
+@media screen and (max-width: 560px)
+  #projects
+    #contributions-container
+      .slick-arrow
+        display: none !important
+
+@media screen and (max-width: 400px)
+  #moderators
+    .header
+      .mods-header
+        font-size: 2rem
