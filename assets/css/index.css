@@ -530,12 +530,12 @@ body .carousel .carousel-inner .card {
 
 #rewards .header {
   background-image: url("../img/rewards-bg.jpg"); }
-#rewards #steem {
+#rewards #blurt {
   margin-top: 50px; }
-  #rewards #steem #steem-logo-container {
+  #rewards #blurt #blurt-logo-container {
     position: relative;
     display: inline-block; }
-    #rewards #steem #steem-logo-container:after {
+    #rewards #blurt #blurt-logo-container:after {
       content: " ";
       position: absolute;
       bottom: 0;
@@ -546,13 +546,13 @@ body .carousel .carousel-inner .card {
       background: rgba(0, 0, 0, 0.3);
       border-radius: 50%/8px;
       filter: blur(5px); }
-    #rewards #steem #steem-logo-container #steem-logo {
+    #rewards #blurt #blurt-logo-container #blurt-logo {
       width: 250px;
       max-width: 250px;
       position: relative;
       margin: 25px 25px 0; }
-    #rewards #steem #steem-logo-container .upvote,
-    #rewards #steem #steem-logo-container .dollar {
+    #rewards #blurt #blurt-logo-container .upvote,
+    #rewards #blurt #blurt-logo-container .dollar {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -564,7 +564,7 @@ body .carousel .carousel-inner .card {
       height: 20px;
       line-height: 14px;
       opacity: 0.9; }
-    #rewards #steem #steem-logo-container .dollar {
+    #rewards #blurt #blurt-logo-container .dollar {
       font-size: 12px;
       line-height: 17px;
       color: #9d3393;

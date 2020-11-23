@@ -1,42 +1,22 @@
 [
   {
-    "name": "Steemit.com",
-    "teaser": "The social application web front-end to the Steem Blockchain",
+    "name": "Blurt.blog",
+    "teaser": "The social application web front-end to the Blurt Blockchain",
     "image": "https://res.cloudinary.com/hpiynhbhq/image/upload/v1510152641/y4aytinzid1rnqrtlgyy.png",
-    "url": "https://blurtopian.com/project/steemit/condenser/github/59213335/all",
+    "url": "https://blurtopian.com/project/blurtit/condenser/github/59213335/all",
     "github": {
       "id": "59213335",
-      "url": "https://github.com/steemit/condenser"
-    }
-  },
-  {
-    "name": "Busy.org",
-    "teaser": "Blockchain-based social network where anyone can earn rewards",
-    "image": "https://res.cloudinary.com/hpiynhbhq/image/upload/v1510052188/occhlvtqan2qafwhikbv.png",
-    "url": "https://blurtopian.com/project/busyorg/busy/github/64382195/all",
-    "github": {
-      "id": "64382195",
-      "url": "https://github.com/busyorg/busy"
+      "url": "https://gitlab.com/blurt/openblurt/condenser"
     }
   },
   {
     "name": "Blurtopian.com",
-    "teaser": "Open Source Economy powered by the Steem blockchain",
+    "teaser": "Open Source Economy powered by the Blurt blockchain",
     "image": "https://res.cloudinary.com/hpiynhbhq/image/upload/v1510150908/xx4shp2yiekby5d6sify.png",
-    "url": "https://blurtopian.com/project/utopian-io/blurtopian.com/github/104593314/all",
+    "url": "https://blurtopian.com/project/blurtopian/blurtopian.com/github/104593314/all",
     "github": {
       "id": "104593314",
       "url": "https://github.com/blurtopian/blurtopian.github.io"
-    }
-  },
-  {
-    "name": "Wordpress",
-    "teaser": "Most popular blogging platform and content management system.",
-    "image": "https://res.cloudinary.com/hpiynhbhq/image/upload/v1510151319/fgsq6dznr52ztmbxmxad.png",
-    "url": "https://blurtopian.com/project/WordPress/WordPress/github/2889328/all",
-    "github": {
-      "id": "2889328",
-      "url": "https://github.com/wordpress/wordpress"
     }
   },
   {
@@ -47,16 +27,6 @@
     "github": {
       "id": "106749740",
       "url": "https://github.com/dtube/production"
-    }
-  },
-  {
-    "name": "eSteem",
-    "teaser": "Native Android and iOS mobile application for Steem",
-    "image": "https://res.cloudinary.com/hpiynhbhq/image/upload/v1510152218/lyim8tnecy9fsgn2gnvw.png",
-    "url": "https://blurtopian.com/project/eSteemApp/esteem/github/63218416/all",
-    "github": {
-      "id": "63218416",
-      "url": "https://github.com/eSteemApp/esteem"
     }
   }
 ]

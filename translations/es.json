@@ -13,7 +13,7 @@
     "text2": "Economía de Código Abierto",
     "text3": "¡Gana recompensas al contribuir en tus Proyectos de Código Abierto favoritos <br>!"
   },
-  "intro": "Nuestro mundo moderno se encuentra impulsado por software de <a href='https://en.wikipedia.org/wiki/Open-source_model'>Código Abierto</a>. Este se ejecuta en cada equipo, smartphone o tablet, y todas tus aplicaciones favoritas no podrían funcionar sin él. Voluntarios y entusiastas alrededor del mundo son los que principalmente ayudan a desarrollarlo, incluidos los geeks entre tus amigos que aman más a sus computadoras que salir contigo. El software de Código Abierto es una propiedad común y libre, que permite a todos utilizarlo y modificarlo a sus necesidades. Se basa en la inteligencia colectiva en lugar de las normas impuestas por otros. ¡Todo este trabajo se hace gratis! Sin embargo, Utopian recompensa a quienes contribuyen en este tipo de proyectos, siempre y cuando se alcancen ciertos estándares de calidad.",
+  "intro": "Nuestro mundo moderno se encuentra impulsado por software de <a href='https://en.wikipedia.org/wiki/Open-source_model'>Código Abierto</a>. Este se ejecuta en cada equipo, smartphone o tablet, y todas tus aplicaciones favoritas no podrían funcionar sin él. Voluntarios y entusiastas alrededor del mundo son los que principalmente ayudan a desarrollarlo, incluidos los geeks entre tus amigos que aman más a sus computadoras que salir contigo. El software de Código Abierto es una propiedad común y libre, que permite a todos utilizarlo y modificarlo a sus necesidades. Se basa en la inteligencia colectiva en lugar de las normas impuestas por otros. ¡Todo este trabajo se hace gratis! Sin embargo, Blurtopian recompensa a quienes contribuyen en este tipo de proyectos, siempre y cuando se alcancen ciertos estándares de calidad.",
   "octocat": {
     "hi": "¡Hola! ¡Yo soy Octocat!",
     "text": "¡Trabajo en GitHub,como una Mascota! Este es un buen lugar para estar. Somos una comunidad mundial de entusiastas y voluntarios, que trabajan juntos en miles de proyectos interesantes. <b>Blurtopian.com</b> les recompensa por hacer contribuciones a proyectos de Código Abierto, como corrección de errores, traducción de textos, escribir documentación, compartir buenas ideas y mucho más.",
@@ -34,7 +34,7 @@
     },
     "development": {
       "headline": "Desarrollo",
-      "text": "Si has escrito el código y creado una petición al repositorio, comparte tu trabajo con la comunidad Utopian."
+      "text": "Si has escrito el código y creado una petición al repositorio, comparte tu trabajo con la comunidad Blurtopian."
     },
     "bughunting": {
       "headline": "Caza de Errores",
@@ -58,7 +58,7 @@
     },
     "visibility": {
       "headline": "Visibilidad",
-      "text": "Los esfuerzos de Marketing también pueden ser recompensados en Utopian. Comunica a la comunidad lo que has hecho para promover un proyecto de Código Abierto."
+      "text": "Los esfuerzos de Marketing también pueden ser recompensados en Blurtopian. Comunica a la comunidad lo que has hecho para promover un proyecto de Código Abierto."
     },
     "tutorials": {
       "headline": "Tutoriales",
@@ -74,7 +74,7 @@
     }
   },
   "crowdsourcing": {
-    "headline": "Utopian para Propietarios de Proyectos",
+    "headline": "Blurtopian para Propietarios de Proyectos",
     "text": "Con Blurtopian.com, podrás realizar <b>anuncios</b> para tus proyectos y obtener rápidamente crowdsourcing de un grupo internacional de talentos. Captar la atención de valiosos colaboradores y usar el poder de la inteligencia colectiva para desarrollar tus proyectos.",
     "thinkers": {
       "headline": "Pensadores",
@@ -114,10 +114,10 @@
     "curator_rewards": "Recompensas para Curadores",
     "pending_rewards": "Recompensas Pendientes",
     "total_generated": "Total Generado",
-    "steem": {
+    "blurt": {
       "headline": "¿Quién paga las recompensas?",
-      "text": "Para pagar las recompensas, Blurtopian.com utiliza el <a href='https://steem.io/'> Steem blockchain</a>. El dinero es creado en la forma de una criptomoneda llamada <b>STEEM</b>, a través de la votación de la comunidad. Nadie tiene que pagar directamente las recompensas. Estas son generadas y distribuidas mediante un algoritmo llamado <i>Proof-of-Brain</i>, que estimula a los usuarios para que creen y hagan curación en contenidos de calidad. <br><br>En el caso de Blurtopian.com, su aportación al mundo del Código Abierto es la calidad del contenido. Al votar sus contribuciones, la comunidad crea dinero para recompensarle por su trabajo. Las personas también pueden optar por pagarse unos a otros utilizando directamente su propio STEEM, si ellos quieren, pero es algo opcional. <br><br>El valor del voto de un usuario se basa en su propia inversión en la plataforma, mientras más grande sea su participación, mayor valor tendrá el mismo al momento de la curación. Blurtopian.com podrá votar en sus contribuciones. Con más de <b>3 millones de Steem Power</b> delegado a la cuenta de la plataforma Blurtopian.com, un voto por su valor completo vale más que <b>250 dólares</b>, al precio corriente dentro del mercado. <br><br><a href='#faq'> Revise las preguntas frecuentes</a> para poder obtener más información.",
-      "button": "Conocer más acerca de Steem"
+      "text": "Para pagar las recompensas, Blurtopian.com utiliza el <a href='https://blurt.io/'> Blurt blockchain</a>. El dinero es creado en la forma de una criptomoneda llamada <b>BLURT</b>, a través de la votación de la comunidad. Nadie tiene que pagar directamente las recompensas. Estas son generadas y distribuidas mediante un algoritmo llamado <i>Proof-of-Brain</i>, que estimula a los usuarios para que creen y hagan curación en contenidos de calidad. <br><br>En el caso de Blurtopian.com, su aportación al mundo del Código Abierto es la calidad del contenido. Al votar sus contribuciones, la comunidad crea dinero para recompensarle por su trabajo. Las personas también pueden optar por pagarse unos a otros utilizando directamente su propio BLURT, si ellos quieren, pero es algo opcional. <br><br>El valor del voto de un usuario se basa en su propia inversión en la plataforma, mientras más grande sea su participación, mayor valor tendrá el mismo al momento de la curación. Blurtopian.com podrá votar en sus contribuciones. Con más de <b>3 millones de Blurt Power</b> delegado a la cuenta de la plataforma Blurtopian.com, un voto por su valor completo vale más que <b>250 dólares</b>, al precio corriente dentro del mercado. <br><br><a href='#faq'> Revise las preguntas frecuentes</a> para poder obtener más información.",
+      "button": "Conocer más acerca de Blurt"
     }
   },
   "rules": {
@@ -125,7 +125,7 @@
     "step2": "¡Será revisado por nuestros<br>moderadores!",
     "step3": "¡Será votado por Blurtopian.com y la comunidad!",
     "step4": "¡Se pagará<br>luego de 7 días!",
-    "text": "Para asegurar la calidad, cada contribución es revisada por uno de nuestros moderadores, de acuerdo con nuestras reglas. El no respeto de estas reglas le hará conseguir recompensas inferiores o incluso hacer que su contribución no sea aceptada del todo. Sin embargo, si su aporte no es aceptado, todavía será publicado en el Blockchain de Steem, y podrá ganar recompensas. En este caso, estarás por tu cuenta. Utopian no recompensará ni compartirá su contribución.",
+    "text": "Para asegurar la calidad, cada contribución es revisada por uno de nuestros moderadores, de acuerdo con nuestras reglas. El no respeto de estas reglas le hará conseguir recompensas inferiores o incluso hacer que su contribución no sea aceptada del todo. Sin embargo, si su aporte no es aceptado, todavía será publicado en el Blockchain de Blurt, y podrá ganar recompensas. En este caso, estarás por tu cuenta. Blurtopian no recompensará ni compartirá su contribución.",
     "categories": {
       "suggestions": {
         "headline": "Reglas para Sugerencias",
@@ -139,7 +139,7 @@
         "rule1": "Un subproyecto es un conjunto de novedosas características que tendrán un gran impacto en el proyecto.",
         "rule2": "Los subproyectos deben proporcionar información detallada de las características que serán construidas.",
         "rule3": "Imágenes, capturas de pantalla, enlaces, flujos y ejemplos serán siempre obligatorios en esta categoría.",
-        "rule4": "En esta categoría, la calidad del contenido es el factor principal para poder ser aceptada en Utopian.",
+        "rule4": "En esta categoría, la calidad del contenido es el factor principal para poder ser aceptada en Blurtopian.",
         "rule5": "Si crees que tu idea no califica como un subproyecto, usa la categoría sugerencias en su lugar.",
         "rule6": "Nunca escribas sobre proyectos que ya habías compartido anteriormente o que ya habían sido compartidos por algún otro."
       },
@@ -148,7 +148,7 @@
         "rule1": "Solo serán aceptadas solicitudes de extracción conjuntas o proyectos de Código Abierto que nunca antes hayas publicado en Utopía, incluidos los forks, siempre que no sean solo una copia del original. Pruebas de trabajo serán requeridas.",
         "rule2": "En esta categoría, solo puedes escribir si has desarrollado o contribuido en el código de un proyecto.",
         "rule3": "Debes proporcionar enlaces de las ramificaciones, forks, gists o solicitudes de extracción.",
-        "rule4": "Si tu nombre de usuario en GitHub no es el mismo que en Utopian, deberás demostrar que eres el titular de la cuenta proporcionada en la captura de pantalla de la sesión en GitHub.",
+        "rule4": "Si tu nombre de usuario en GitHub no es el mismo que en Blurtopian, deberás demostrar que eres el titular de la cuenta proporcionada en la captura de pantalla de la sesión en GitHub.",
         "rule5": "Imágenes, capturas de pantalla, enlaces y ejemplos no son necesarios pero si recomendados.",
         "rule6": "Nunca escribas sobre contribuciones de código que ya has compartido anteriormente."
       },
@@ -161,13 +161,13 @@
       },
       "translation": {
         "headline": "Reglas para Traducciones",
-        "rule1": "Para presentar una traducción en Utopian debes haber traducido por lo menos un 30% en proyectos de tamaño medio (500-1000 secuencias), 10-15% para grandes proyectos (1000 o más secuencias), y 100% para proyectos pequeños (1-500 secuencias).",
+        "rule1": "Para presentar una traducción en Blurtopian debes haber traducido por lo menos un 30% en proyectos de tamaño medio (500-1000 secuencias), 10-15% para grandes proyectos (1000 o más secuencias), y 100% para proyectos pequeños (1-500 secuencias).",
         "rule2": "Utiliza esta categoría solo para traducciones que hayas realizado o actualizado para un proyecto de Código Abierto.",
         "rule3": "Deberás incluir el texto completo que has traducido en la publicación o incluir enlaces públicos a las versiones completas.",
         "rule4": "Incluye tantos detalles como sea posible, para que puedan ser revisadas tus traducciones y las herramientas que has utilizado para traducir.",
         "rule5": "Las traducciones completas siempre son preferidas. Si vas a escribir sobre una traducción parcial, nos reservamos el derecho a evaluar el trabajo real.",
         "rule6": "Debes ser el autor de la traducción y proporcionar una forma de verificar tu trabajo.",
-        "rule7": "Si tu nombre de usuario en Crowdin o en plataformas de traducción similares no es el mismo nombre de usuario de Utopian, debes demostrar que eres el dueño de la cuenta proporcionando una captura de pantalla con tu sesión abierta en la plataforma de traducción.",
+        "rule7": "Si tu nombre de usuario en Crowdin o en plataformas de traducción similares no es el mismo nombre de usuario de Blurtopian, debes demostrar que eres el dueño de la cuenta proporcionando una captura de pantalla con tu sesión abierta en la plataforma de traducción.",
         "rule8": "Nunca envíes traducciones que ya han sido compartidas por ti, o por algún otro."
       },
       "graphics": {
@@ -193,7 +193,7 @@
         "rule1": "En esta categoría se presentan los resultados del esfuerzo en marketing que has realizado para mejorar la visibilidad de un proyecto de Código Abierto; tales como campañas de social media, publicidad, conferencias, encuentros.",
         "rule2": "Deberás proporcionar enlaces, imágenes o vídeos que den prueba de tus esfuerzos, y también para compartir los resultados.",
         "rule3": "Si tus esfuerzos trajeron solo unos pocos o ningún nuevo usuario/colaborador para el proyecto de Código Abierto, no deberías escribir sobre él.",
-        "rule4": "Deberás probar tu identidad. Si tu nombre de usuario en Utopian no es el mismo que tienes en las plataformas que utilizas para el marketing del proyecto, debes proporcionar capturas de pantalla de tu sesión abierta en estas plataformas.",
+        "rule4": "Deberás probar tu identidad. Si tu nombre de usuario en Blurtopian no es el mismo que tienes en las plataformas que utilizas para el marketing del proyecto, debes proporcionar capturas de pantalla de tu sesión abierta en estas plataformas.",
         "rule5": "Nunca escribas sobre esfuerzos de visibilidad que hayas compartido anteriormente."
       },
       "documentation": {
@@ -216,7 +216,7 @@
         "rule5": "Si el tutorial contiene un vídeo, deberás utilizar la categoría Vídeo Tutoriales en lugar de esta.",
         "rule6": "Debes ser el autor del tutorial.",
         "rule7": "Si no estás publicando el tutorial completo, debes proporcionar enlaces públicos a la versión completa del mismo.",
-        "rule8": "Nunca publiques tutoriales que ya has compartido anteriormente en el blockchain de Steem en general."
+        "rule8": "Nunca publiques tutoriales que ya has compartido anteriormente en el blockchain de Blurt en general."
       },
       "videotutorials": {
         "headline": "Reglas para Video Tutoriales",
@@ -226,7 +226,7 @@
         "rule4": "Una introducción de texto en inglés en la parte superior de la publicación, siempre será obligatoria.",
         "rule5": "Debes ser el autor del video tutorial.",
         "rule6": "Debes insertar el video directamente en la publicación. Por el momento, los videos de Youtube son obligatorios.",
-        "rule7": "Nunca publiques video tutoriales que ya has compartido anteriormente en el blockchain de Steem en general."
+        "rule7": "Nunca publiques video tutoriales que ya has compartido anteriormente en el blockchain de Blurt en general."
       },
       "copywriting": {
         "headline": "Reglas para Redacción",
@@ -240,7 +240,7 @@
       },
       "blog": {
         "headline": "Reglas para Publicaciones en el Blog",
-        "rule1": "Debes proporcionar un formato original. No publiques noticias encontradas en la web o pensamientos generales, a menos que tengas un único y consistente formato. <a href='https://blurtopian.com/utopian-io/@utopian-io/2xqdoa-utopian-weekly-1-the-weekly-open-source-newsletter'>Ejemplo de un buen formato</a>.",
+        "rule1": "Debes proporcionar un formato original. No publiques noticias encontradas en la web o pensamientos generales, a menos que tengas un único y consistente formato. <a href='https://blurtopian.com/blurtopian/@blurtopian/2xqdoa-blurtopian-weekly-1-the-weekly-open-source-newsletter'>Ejemplo de un buen formato</a>.",
         "rule2": "Solo puedes escribir publicaciones en el blog que estén relacionadas con <b>proyectos de código abierto</b> o con el <b>movimiento del código abierto</b> en general.",
         "rule3": "Las publicaciones en el blog deben proporcionar contenidos y descripciones detalladas de los proyectos de Código Abierto.",
         "rule4": "Imágenes, capturas de pantalla, enlaces y ejemplos no son necesarios, pero si recomendados.",
@@ -255,38 +255,38 @@
     "pending": "Pendiente",
     "previous": "Anterior",
     "meet": "Conoce a nuestros moderadores",
-    "text": "En Utopian, todos los contribuyentes son recompensados por su arduo trabajo, incluidos nuestros moderadores, quienes se aseguran de que se cumplan altos estándares de calidad dentro de la plataforma.",
+    "text": "En Blurtopian, todos los contribuyentes son recompensados por su arduo trabajo, incluidos nuestros moderadores, quienes se aseguran de que se cumplan altos estándares de calidad dentro de la plataforma.",
     "pending_payout": "Pago Pendiente",
     "previous_payout": "Pago Anterior",
-    "text2": "5% of the total contributor rewards that are generated go to the Moderators based on the amount of contributions they have reviewed. To become an Utopian Moderator you must have high reputation and often review submitted contributions."
+    "text2": "5% of the total contributor rewards that are generated go to the Moderators based on the amount of contributions they have reviewed. To become an Blurtopian Moderator you must have high reputation and often review submitted contributions."
   },
   "faq": {
     "q1": {
-      "headline": "1. What is Utopian?",
-      "text": "<p>Open Source software has always been associated with voluntary work by individuals across the world who don't necessarily get paid for all their hard work. This software runs on every device, website and application you can think of. It is often created by volunteers, hobbyists and enthusiasts who selflessly dedicate their time and effort to the cause.</p><p>Utopian is building an open source economy, in which the people who make valuable contributions to open source software projects get rewarded for their hard work. Built ontop of the Steem blockchain, Utopian uses the wisdom of the crowd to reward valuable contributions. Project owners and other contributors all get to decide how rewards are distributed through voting or liking individual contributions, and they also have the option to support contributors directly by paying them in a cryptocurrency called STEEM, which can easily be traded for other cryptocurrencies such as Bitcoin and Ethereum.</p>"
+      "headline": "1. What is Blurtopian?",
+      "text": "<p>Open Source software has always been associated with voluntary work by individuals across the world who don't necessarily get paid for all their hard work. This software runs on every device, website and application you can think of. It is often created by volunteers, hobbyists and enthusiasts who selflessly dedicate their time and effort to the cause.</p><p>Blurtopian is building an open source economy, in which the people who make valuable contributions to open source software projects get rewarded for their hard work. Built ontop of the Blurt blockchain, Blurtopian uses the wisdom of the crowd to reward valuable contributions. Project owners and other contributors all get to decide how rewards are distributed through voting or liking individual contributions, and they also have the option to support contributors directly by paying them in a cryptocurrency called BLURT, which can easily be traded for other cryptocurrencies such as Bitcoin and Ethereum.</p>"
     },
     "q2": {
-      "headline": "2. What is Steem?",
-      "text": "<p>Steem is a next-generation blockchain that supports social media applications and their content. It uses a unique Proof-of-Brain mechanism that utilizes the wisdom of the crowd to reward people who make valuable contributions to their respective communities. Its native currency is called STEEM and it is the currency that Utopian contributors are rewarded in.</p><p><a href='https://steem.io'>Learn more about Steem</a></p>"
+      "headline": "2. What is Blurt?",
+      "text": "<p>Blurt is a next-generation blockchain that supports social media applications and their content. It uses a unique Proof-of-Brain mechanism that utilizes the wisdom of the crowd to reward people who make valuable contributions to their respective communities. Its native currency is called BLURT and it is the currency that Blurtopian contributors are rewarded in.</p><p><a href='https://blurt.io'>Learn more about Blurt</a></p>"
     },
     "q3": {
       "headline": "3. Where do the rewards come from?",
-      "text": "<p>Steem's economic model allows for the creation of new tokens (or units of currency) at a predefined inflation rate of around 9.5% per year, going down by approximately 0.5% every year over the next twenty and a half years, until it reaches a 0.95% yearly inflation rate . These new tokens are distributed continuously to people performing actions deemed valuable by their communities through community voting. In the case of the Utopian community, as project owners, fellow contributors and other people with vested interests in open source software development \"upvote\" or \"like\" contributions, they have a say in how these new tokens are distributed, in direct relation to their stake in the Steem ecosystem (i.e. how much Steem Power they have). The more Steem Power they have, the more rewards they can give to contributors.</p><p>Contributors are able to redeem their rewards seven days after the post or contribution has been published.</p><p><a href='https://steem.io'>Learn more about the Steem ecosystem</a></p>"
+      "text": "<p>Blurt's economic model allows for the creation of new tokens (or units of currency) at a predefined inflation rate of around 9.5% per year, going down by approximately 0.5% every year over the next twenty and a half years, until it reaches a 0.95% yearly inflation rate . These new tokens are distributed continuously to people performing actions deemed valuable by their communities through community voting. In the case of the Blurtopian community, as project owners, fellow contributors and other people with vested interests in open source software development \"upvote\" or \"like\" contributions, they have a say in how these new tokens are distributed, in direct relation to their stake in the Blurt ecosystem (i.e. how much Blurt Power they have). The more Blurt Power they have, the more rewards they can give to contributors.</p><p>Contributors are able to redeem their rewards seven days after the post or contribution has been published.</p><p><a href='https://blurt.io'>Learn more about the Blurt ecosystem</a></p>"
     },
     "q4": {
       "headline": "4. Where do I find my wallet?",
-      "text": "<p>All the STEEM you earn on Utopian is made available to your account when each individual post reaches its payout date, which is 7 days after you published it. At this time, the rewards are available for you to redeem to your account balance.</p><p>To see your account balance and to have access to your funds, you will need to go to <a href='https://steemit.com'>steemit.com</a>. There is a section named “Wallet” where you can see how much STEEM you own and also have the tools to transfer it, among other things. There is a mobile STEEM wallet app currently being developed by Steemit Inc. and once it is out, it will be the easiest way to manage your STEEM wallet.</p>"
+      "text": "<p>All the BLURT you earn on Blurtopian is made available to your account when each individual post reaches its payout date, which is 7 days after you published it. At this time, the rewards are available for you to redeem to your account balance.</p><p>To see your account balance and to have access to your funds, you will need to go to <a href='https://blurt.blog'>blurt.blog</a>. There is a section named “Wallet” where you can see how much BLURT you own and also have the tools to transfer it, among other things. There is a mobile BLURT wallet app currently being developed by Blurtit Inc. and once it is out, it will be the easiest way to manage your BLURT wallet.</p>"
     },
     "q5": {
-      "headline": "5. How do I cash in my STEEM?",
-      "text": "<p>Once you have some STEEM in your wallet, you can transfer it to a cryptocurrency exchange that supports STEEM like <a href='https://poloniex.com/'>Poloniex</a> or <a href='https://bittrex.com/'>Bittrex</a>. There you can exchange it for other cryptocurrencies like Bitcoin or Ethereum, which are easier to exchange for fiat (USD for example).</p><p>Or you can use <a href='https://blocktrades.us/'>Blocktrades</a>, which is integrated into the Steemit wallet interface. Just click your STEEM balance and a dropdown menu will appear. Then click “Sell” and you'll be taken to Blocktrades.</p>"
+      "headline": "5. How do I cash in my BLURT?",
+      "text": "<p>Once you have some BLURT in your wallet, you can transfer it to a cryptocurrency exchange that supports BLURT like <a href='https://poloniex.com/'>Poloniex</a> or <a href='https://bittrex.com/'>Bittrex</a>. There you can exchange it for other cryptocurrencies like Bitcoin or Ethereum, which are easier to exchange for fiat (USD for example).</p><p>Or you can use <a href='https://blocktrades.us/'>Blocktrades</a>, which is integrated into the Blurtit wallet interface. Just click your BLURT balance and a dropdown menu will appear. Then click “Sell” and you'll be taken to Blocktrades.</p>"
     },
     "q6": {
       "headline": "6. How do I earn more rewards?",
-      "text": "<p>Quality is what matters most on Utopian. The community appreciates useful contributions that solve problems and move projects forward, so quality contributions will get noticed and rewarded. Always submitting your best work is the surest way to position yourself to earn more for your contributions.</p>"
+      "text": "<p>Quality is what matters most on Blurtopian. The community appreciates useful contributions that solve problems and move projects forward, so quality contributions will get noticed and rewarded. Always submitting your best work is the surest way to position yourself to earn more for your contributions.</p>"
     }
   },
   "blog": {
-    "readmore": "read more on steemit.com"
+    "readmore": "read more on blurt.blog"
   }
 }

@@ -112,18 +112,18 @@ $(function () {
     })
     .addTo(scrollController);
 
-  // steem logo
-  let steemTween = new TweenMax.from('#steem-logo-container', 1.5, {opacity: 0, bottom: -50, ease: Power2.easeInOut,}, .05);
-  new ScrollMagic.Scene({triggerElement: '#steem'})
-    .setTween(steemTween)
+  // blurt logo
+  let blurtTween = new TweenMax.from('#blurt-logo-container', 1.5, {opacity: 0, bottom: -50, ease: Power2.easeInOut,}, .05);
+  new ScrollMagic.Scene({triggerElement: '#blurt'})
+    .setTween(blurtTween)
     .reverse(false)
     .addTo(scrollController);
 
-  // generate upvotes on steem logo...
+  // generate upvotes on blurt logo...
   for (let i = 0; i < 6; i++){
     let bubble = document.createElement('i');
     TweenLite.set(bubble, {attr: {class: 'fa fa-angle-up upvote'}, left: randomNumberBetween(0, 100) + '%', bottom: randomNumberBetween(0, 100) + '%', scale: randomNumberBetween(.5, 2)});
-    $('#steem-logo-container').append(bubble);
+    $('#blurt-logo-container').append(bubble);
   }
 
   // ...and animate them
@@ -133,9 +133,9 @@ $(function () {
     .staggerTo('.upvote', 2, {bottom: "+=25", opacity: 0, ease: Power1.easeInOut}, 1, '-=5');
 
   // blog
-  steemitWidgets.blog({
-    element: 'utopian-steemit-blog',
-    user: 'utopian-io',
+  blurtitWidgets.blog({
+    element: 'blurtopian-blog',
+    user: 'blurtopian',
     limit: 10,
     template: 'blog-template',
     dateCallback: function (date) {return moment.utc(date).from(moment.utc().format('YYYY-MM-DD HH:mm:ss'));}
