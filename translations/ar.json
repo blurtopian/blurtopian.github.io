@@ -275,7 +275,7 @@
     },
     "q4": {
       "headline": "4. Where do I find my wallet?",
-      "text": "<p>All the BLURT you earn on Blurtopian is made available to your account when each individual post reaches its payout date, which is 7 days after you published it. At this time, the rewards are available for you to redeem to your account balance.</p><p>To see your account balance and to have access to your funds, you will need to go to <a href='https://blurt.blog'>blurt.blog</a>. There is a section named “Wallet” where you can see how much BLURT you own and also have the tools to transfer it, among other things. There is a mobile BLURT wallet app currently being developed by Blurtit Inc. and once it is out, it will be the easiest way to manage your BLURT wallet.</p>"
+      "text": "<p>All the BLURT you earn on Blurtopian is made available to your account when each individual post reaches its payout date, which is 7 days after you published it. At this time, the rewards are available for you to redeem to your account balance.</p><p>To see your account balance and to have access to your funds, you will need to go to <a href='https://blurt.world'>blurt.world</a>. There is a section named “Wallet” where you can see how much BLURT you own and also have the tools to transfer it, among other things. There is a mobile BLURT wallet app currently being developed by Blurtit Inc. and once it is out, it will be the easiest way to manage your BLURT wallet.</p>"
     },
     "q5": {
       "headline": "5. How do I cash in my BLURT?",
@@ -287,6 +287,6 @@
     }
   },
   "blog": {
-    "readmore": "read more on blurt.blog"
+    "readmore": "read more on blurt.world"
   }
 }

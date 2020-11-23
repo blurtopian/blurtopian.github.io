@@ -60,7 +60,7 @@
                     <a href="https://register.blurt.buzz/?referral=eastmael" class="btn btn-primary mr-2 font-weight-bold">
                         {{ trans('messages.nav.signup') }}
                     </a>
-                    <a href="https://blurt.blog/login.html" class="btn btn-primary font-weight-bold" target="_blank" rel="noreferrer noopener">
+                    <a href="https://blurt.world/login.html" class="btn btn-primary font-weight-bold" target="_blank" rel="noreferrer noopener">
                         {{ trans('messages.nav.login') }}
                     </a>
                 </div>
@@ -658,11 +658,11 @@
                             <div id="carouselModeratorsControls" class="carousel slide" data-autoplay="off" data-interval="7000">
                                 <div class="carousel-inner">
                                     <div v-for="(moderator, i) in moderators" :class="'carousel-item' + (!i ? ' active' : '')">
-                                        <a :href="'https://blurt.blog/@' + moderator.account">
+                                        <a :href="'https://blurt.world/@' + moderator.account">
                                             <img :src="'https://img.busy.org/@' + moderator.account + '?s=150'" class="profile-image" />
                                         </a>
                                         <h4>
-                                            <a :href="'https://blurt.blog/@' + moderator.account">
+                                            <a :href="'https://blurt.world/@' + moderator.account">
                                                 {{ moderator.account }}
                                             </a>
                                         </h4>
@@ -810,7 +810,7 @@
                 <div class="text-center"><i class="fa fa-2x fa-spin fa-spinner text-muted"></i></div>
             </div>
             <div class="text-center my-5">
-                <a href="https://blurt.blog/@utopian-io" class="btn btn-primary" v-html="trans('messages.blog.readmore')"></a>
+                <a href="https://blurt.world/@blurtopian" class="btn btn-primary" v-html="trans('messages.blog.readmore')"></a>
             </div>
         </div>
     </div>
@@ -819,16 +819,13 @@
         <div class="border-top"></div>
         <div class="container">
             <div class="social-links">
-                <a href="https://www.facebook.com/utopian.io/" target="_blank">
+                <a href="https://www.facebook.com/blurtopian/" target="_blank">
                     <img src="assets/img/facebook2.png"/>
                 </a>
-                <a href="https://twitter.com/utopian_io" target="_blank">
+                <a href="https://twitter.com/blurtopian" target="_blank">
                     <img src="assets/img/twitter2.png"/>
                 </a>
-                <a href="https://www.linkedin.com/company/18349554/" target="_blank">
-                    <img src="assets/img/linkedin2.png"/>
-                </a>
-                <a href="https://github.com/utopian-io" target="_blank">
+                <a href="https://github.com/blurtopian" target="_blank">
                     <img src="assets/img/github2.png"/>
                 </a>
             </div>
