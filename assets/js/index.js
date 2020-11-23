@@ -133,7 +133,7 @@ $(function () {
     .staggerTo('.upvote', 2, {bottom: "+=25", opacity: 0, ease: Power1.easeInOut}, 1, '-=5');
 
   // blog
-  blurtitWidgets.blog({
+  steemitWidgets.blog({
     element: 'blurtopian-blog',
     user: 'blurtopian',
     limit: 10,
