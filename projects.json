@@ -5,8 +5,18 @@
     "image": "assets/img/projects/blurtkey.png",
     "url": "https://blurtopian.com/project/blurtit/condenser/github/59213335/all",
     "github": {
-      "id": "1234567890",
+      "id": "2222222222",
       "url": "https://github.com/blurtopian/blurtopian.github.io"
+    }
+  },
+  {
+    "name": "Polls for Pi",
+    "teaser": "Web3.0 Incentivized Polls",
+    "image": "assets/img/projects/polls-for-pi.png",
+    "url": "https://blurtopian.com/project/blurtit/condenser/github/59213335/all",
+    "github": {
+      "id": "1111111111",
+      "url": "https://github.com/pi-apps/polls-for-pi"
     }
   },
   {
