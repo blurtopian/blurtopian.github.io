@@ -1,6 +1,16 @@
 [
   {
-    "name": "Blurt.world",
+    "name": "BlurtKey",
+    "teaser": "A Secure Wallet for Blurt",
+    "image": "assets/img/projects/blurtkey.png",
+    "url": "https://blurtopian.com/project/blurtit/condenser/github/59213335/all",
+    "github": {
+      "id": "1234567890",
+      "url": "https://github.com/blurtopian/blurtopian.github.io"
+    }
+  },
+  {
+    "name": "Blurt.blog",
     "teaser": "The social application web front-end to the Blurt Blockchain",
     "image": "https://res.cloudinary.com/dg5crljhv/image/upload/v1606118038/bloglogo_rr91nu.svg",
     "url": "https://blurtopian.com/project/blurtit/condenser/github/59213335/all",
