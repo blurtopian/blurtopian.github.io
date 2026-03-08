@@ -10,6 +10,26 @@
     }
   },
   {
+    "name": "git_archiver",
+    "teaser": "GitHub Contribution Archiving Tool by Blurtopian",
+    "image": "https://res.cloudinary.com/dg5crljhv/image/upload/v1606118361/Banner4_Orange_465x300_ktqmkc.png",
+    "url": "https://blurtopian.com/project/blurtopian/blurtopian.com/github/104593314/all",
+    "github": {
+      "id": "104593314",
+      "url": "https://github.com/blurtopian/git_archiver"
+    }
+  },
+  {
+    "name": "TruHack",
+    "teaser": "Decentralized Hackathon Platform by Blurtopian",
+    "image": "https://res.cloudinary.com/dg5crljhv/image/upload/v1606118361/Banner4_Orange_465x300_ktqmkc.png",
+    "url": "https://blurtopian.com/project/blurtopian/blurtopian.com/github/104593314/all",
+    "github": {
+      "id": "104593314",
+      "url": "https://github.com/blurtopian/truhack"
+    }
+  },
+  {
     "name": "Polls for Pi",
     "teaser": "Web3.0 Incentivized Polls",
     "image": "assets/img/projects/polls-for-pi.png",
@@ -20,6 +40,16 @@
     }
   },
   {
+    "name": "Blurtopian.com",
+    "teaser": "Open Source Contributor Rewards Platform",
+    "image": "https://res.cloudinary.com/dg5crljhv/image/upload/v1606118361/Banner4_Orange_465x300_ktqmkc.png",
+    "url": "https://blurtopian.com/project/blurtopian/blurtopian.com/github/104593314/all",
+    "github": {
+      "id": "104593314",
+      "url": "https://github.com/blurtopian/blurtopian.github.io"
+    }
+  },
+  {
     "name": "Blurt.blog",
     "teaser": "The social application web front-end to the Blurt Blockchain",
     "image": "https://res.cloudinary.com/dg5crljhv/image/upload/v1606118038/bloglogo_rr91nu.svg",
@@ -27,16 +57,6 @@
     "github": {
       "id": "59213335",
       "url": "https://gitlab.com/blurt/openblurt/condenser"
-    }
-  },
-  {
-    "name": "Blurtopian.com",
-    "teaser": "Open Source Economy powered by the Blurt blockchain",
-    "image": "https://res.cloudinary.com/dg5crljhv/image/upload/v1606118361/Banner4_Orange_465x300_ktqmkc.png",
-    "url": "https://blurtopian.com/project/blurtopian/blurtopian.com/github/104593314/all",
-    "github": {
-      "id": "104593314",
-      "url": "https://github.com/blurtopian/blurtopian.github.io"
     }
   },
   {
