@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blurtopian - Platform Architecture &amp; AWS Infrastructure</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="How Blurtopian's open source contributor rewards platform is built on AWS — EC2, RDS, Lambda, and CloudFront.">
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="assets/css/index.css"/>
+    <style>
+        /* ── Page shell ── */
+        body { font-family: 'Open Sans', sans-serif; color: #333; }
+
+        /* ── Hero ── */
+        #arch-hero {
+            background: #252525;
+            padding: 120px 0 80px;
+        }
+        #arch-hero h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #4b7dc0, #9d3393);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        #arch-hero p { color: rgba(255,255,255,0.7); font-size: 1.1rem; max-width: 640px; margin: 0 auto; }
+
+        /* ── Section labels ── */
+        .section-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #9d3393;
+            margin-bottom: 0.5rem;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #252525;
+            margin-bottom: 1rem;
+        }
+
+        /* ── Architecture diagram ── */
+        #diagram {
+            background: #f4f6fb;
+            padding: 60px 0;
+        }
+        .arch-diagram {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Layers */
+        .arch-layer {
+            display: flex;
+            align-items: stretch;
+            gap: 16px;
+            margin-bottom: 0;
+            position: relative;
+        }
+        .arch-layer-label {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #aaa;
+            min-width: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .arch-nodes {
+            flex: 1;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* Connector arrow between layers */
+        .arch-connector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 0;
+            color: #bbb;
+            font-size: 1.2rem;
+            margin-left: 44px; /* align under nodes, past label */
+        }
+        .arch-connector span {
+            font-size: 0.72rem;
+            color: #bbb;
+            margin: 0 8px;
+            letter-spacing: 0.05em;
+        }
+
+        /* Node cards */
+        .arch-node {
+            flex: 1;
+            min-width: 140px;
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 16px 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            border-top: 4px solid #4b7dc0;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .arch-node:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+        .arch-node.aws { border-top-color: #ff9900; }
+        .arch-node.blockchain { border-top-color: #9d3393; }
+        .arch-node.external { border-top-color: #54d2a0; }
+
+        .arch-node .node-icon {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+        .arch-node .node-service {
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #ff9900;
+            margin-bottom: 2px;
+        }
+        .arch-node.blockchain .node-service { color: #9d3393; }
+        .arch-node.external .node-service { color: #54d2a0; }
+        .arch-node.frontend .node-service { color: #4b7dc0; }
+        .arch-node h5 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #252525;
+            margin: 0 0 4px;
+        }
+        .arch-node p {
+            font-size: 0.72rem;
+            color: #888;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* ── Service deep-dives ── */
+        #services { padding: 80px 0; }
+        .service-card {
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+            margin-bottom: 32px;
+            transition: box-shadow 0.2s;
+        }
+        .service-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.12); }
+        .service-card .card-header {
+            background: linear-gradient(135deg, #232f3e 60%, #37475a);
+            padding: 24px 28px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            border: none;
+        }
+        .service-card .card-header .aws-badge {
+            background: #ff9900;
+            color: #232f3e;
+            font-size: 0.6rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+        .service-card .card-header h3 {
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+        .service-card .card-header .service-icon {
+            font-size: 2rem;
+            color: #ff9900;
+            flex-shrink: 0;
+        }
+        .service-card .card-body { padding: 28px; }
+        .service-card .role-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #9d3393;
+            margin-bottom: 6px;
+        }
+        .service-card .role-text {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #252525;
+            margin-bottom: 12px;
+        }
+        .service-card .card-body p {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.7;
+        }
+        .service-detail-list {
+            list-style: none;
+            padding: 0;
+            margin: 16px 0 0;
+        }
+        .service-detail-list li {
+            font-size: 0.85rem;
+            color: #444;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+        .service-detail-list li:last-child { border-bottom: none; }
+        .service-detail-list li .bullet {
+            color: #ff9900;
+            font-size: 0.9rem;
+            margin-top: 1px;
+            flex-shrink: 0;
+        }
+
+        /* ── Data flow ── */
+        #data-flow { background: #f4f6fb; padding: 80px 0; }
+        .flow-step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 32px;
+            position: relative;
+        }
+        .flow-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 22px;
+            top: 48px;
+            width: 2px;
+            height: calc(100% - 16px);
+            background: linear-gradient(to bottom, #4b7dc0, #9d3393);
+            opacity: 0.3;
+        }
+        .flow-step .step-num {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4b7dc0, #9d3393);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .flow-step .step-body h5 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #252525;
+            margin-bottom: 4px;
+        }
+        .flow-step .step-body p {
+            font-size: 0.88rem;
+            color: #666;
+            margin: 0;
+            line-height: 1.6;
+        }
+        .flow-step .step-body .aws-tag {
+            display: inline-block;
+            background: #232f3e;
+            color: #ff9900;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        /* ── Summary table ── */
+        #summary { padding: 80px 0; }
+        .summary-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+        }
+        .summary-table thead tr { background: #232f3e; }
+        .summary-table thead th {
+            color: #ff9900;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 16px 20px;
+            border: none;
+        }
+        .summary-table tbody tr { background: #fff; }
+        .summary-table tbody tr:nth-child(even) { background: #f9fafb; }
+        .summary-table tbody td {
+            padding: 14px 20px;
+            font-size: 0.88rem;
+            color: #444;
+            border: none;
+            border-bottom: 1px solid #f0f0f0;
+            vertical-align: top;
+        }
+        .summary-table tbody td:first-child { font-weight: 700; color: #252525; }
+        .summary-table tbody td .service-pill {
+            display: inline-block;
+            background: #fff3e0;
+            color: #e65100;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 2px 10px;
+            border-radius: 20px;
+            border: 1px solid #ffcc80;
+        }
+
+        /* ── Footer ── */
+        .arch-footer {
+            background: #252525;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.8rem;
+            padding: 32px 0;
+            text-align: center;
+        }
+        .arch-footer a { color: rgba(255,255,255,0.6); }
+        .arch-footer a:hover { color: #fff; }
+
+        /* ── Responsive ── */
+        @media (max-width: 767px) {
+            #arch-hero { padding: 100px 0 60px; }
+            #arch-hero h1 { font-size: 1.8rem; }
+            .arch-nodes { flex-direction: column; }
+            .arch-node { min-width: unset; }
+            .flow-step:not(:last-child)::after { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+<div class="container fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent text-uppercase font-weight-bold" id="navbar" style="background: rgba(37,37,37,0.97) !important; box-shadow: 0 2px 12px rgba(0,0,0,0.3);">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo-blurtopian.png"/>
+        </a>
+        <a href="#" class="navbar-toggler" data-toggle="collapse" data-target="#navbarArch">
+            <span class="navbar-toggler-icon"></span>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarArch">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="architecture.html" style="color:#ff9900;">Architecture</a>
+                </li>
+            </ul>
+            <div class="text-right">
+                <a href="https://register.blurt.buzz/?referral=eastmael" class="btn btn-primary font-weight-bold">Get Started Free</a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<div id="arch-hero">
+    <div class="container text-center">
+        <div class="section-label" style="color: #ff9900;">Platform Infrastructure</div>
+        <h1>Built on AWS</h1>
+        <p class="mt-3">
+            Blurtopian's contributor rewards platform is powered by a multi-service AWS stack — purpose-built
+            for scalability, reliability, and global reach. This page documents each layer of the architecture
+            and the role AWS plays in running the platform end-to-end.
+        </p>
+        <div class="mt-4">
+            <span style="background:#232f3e; color:#ff9900; font-size:0.75rem; font-weight:700; padding:5px 14px; border-radius:6px; letter-spacing:0.08em;">
+                &#9650; Amazon Web Services Partner Infrastructure
+            </span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════ DIAGRAM ═══════════════════════════ -->
+<div id="diagram">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-label">Visual Overview</div>
+            <div class="section-title">System Architecture Diagram</div>
+            <p class="text-muted" style="max-width:560px; margin:0 auto; font-size:0.9rem;">
+                Each layer maps to a distinct responsibility. AWS services handle compute, storage, analytics,
+                and content delivery. The Blurt blockchain handles reward distribution.
+            </p>
+        </div>
+
+        <div class="arch-diagram">
+
+            <!-- Layer: Users / Clients -->
+            <div class="arch-layer">
+                <div class="arch-layer-label">Clients</div>
+                <div class="arch-nodes">
+                    <div class="arch-node frontend">
+                        <div class="node-icon">&#127760;</div>
+                        <div class="node-service">Web / Mobile</div>
+                        <h5>Contributors</h5>
+                        <p>Submit work via blurtopian.com</p>
+                    </div>
+                    <div class="arch-node frontend">
+                        <div class="node-icon">&#128193;</div>
+                        <div class="node-service">Web / Mobile</div>
+                        <h5>Project Owners</h5>
+                        <p>Post announcements, manage projects</p>
+                    </div>
+                    <div class="arch-node frontend">
+                        <div class="node-icon">&#9989;</div>
+                        <div class="node-service">Web</div>
+                        <h5>Moderators</h5>
+                        <p>Review and approve contributions</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arch-connector">
+                <i class="fa fa-arrow-down"></i>
+                <span>HTTPS requests · REST API calls</span>
+                <i class="fa fa-arrow-down"></i>
+            </div>
+
+            <!-- Layer: CDN -->
+            <div class="arch-layer">
+                <div class="arch-layer-label">CDN</div>
+                <div class="arch-nodes">
+                    <div class="arch-node aws">
+                        <div class="node-icon">&#9925;</div>
+                        <div class="node-service">AWS CloudFront</div>
+                        <h5>Content Delivery Network</h5>
+                        <p>Caches static assets and API responses globally across edge locations</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arch-connector">
+                <i class="fa fa-arrow-down"></i>
+                <span>Cache miss → origin · API pass-through</span>
+                <i class="fa fa-arrow-down"></i>
+            </div>
+
+            <!-- Layer: Compute -->
+            <div class="arch-layer">
+                <div class="arch-layer-label">Compute</div>
+                <div class="arch-nodes">
+                    <div class="arch-node aws">
+                        <div class="node-icon">&#128421;</div>
+                        <div class="node-service">AWS EC2</div>
+                        <h5>REST API Server</h5>
+                        <p>Hosts api.blurtopian.com — handles all submission, moderation, and rewards endpoints</p>
+                    </div>
+                    <div class="arch-node aws">
+                        <div class="node-icon">&#955;</div>
+                        <div class="node-service">AWS Lambda</div>
+                        <h5>Analytics Pipeline</h5>
+                        <p>Event-driven functions aggregate stats, calculate moderator rewards, power /api/stats</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arch-connector">
+                <i class="fa fa-arrow-down"></i>
+                <span>Reads / writes · SQL queries · event triggers</span>
+                <i class="fa fa-arrow-down"></i>
+            </div>
+
+            <!-- Layer: Data -->
+            <div class="arch-layer">
+                <div class="arch-layer-label">Data</div>
+                <div class="arch-nodes">
+                    <div class="arch-node aws">
+                        <div class="node-icon">&#128663;</div>
+                        <div class="node-service">AWS RDS</div>
+                        <h5>PostgreSQL Database</h5>
+                        <p>Stores users, contributions, moderation decisions, reward records, project config</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arch-connector">
+                <i class="fa fa-arrow-down"></i>
+                <span>Approved contributions → reward transactions</span>
+                <i class="fa fa-arrow-down"></i>
+            </div>
+
+            <!-- Layer: Blockchain -->
+            <div class="arch-layer">
+                <div class="arch-layer-label">Rewards</div>
+                <div class="arch-nodes">
+                    <div class="arch-node blockchain">
+                        <div class="node-icon">&#9741;</div>
+                        <div class="node-service">Blurt Blockchain</div>
+                        <h5>Reward Distribution</h5>
+                        <p>Proof-of-Brain consensus distributes BLURT tokens to approved contributors after 7 days</p>
+                    </div>
+                    <div class="arch-node external">
+                        <div class="node-icon">&#128201;</div>
+                        <div class="node-service">GitHub API</div>
+                        <h5>git_archiver Integration</h5>
+                        <p>Verifies pull requests, forks, and open source contribution authenticity</p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /.arch-diagram -->
+    </div>
+</div>
+
+<!-- ═══════════════════════════ SERVICE DEEP-DIVES ═══════════════════════════ -->
+<div id="services">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-label">Service Breakdown</div>
+            <div class="section-title">AWS Services in Detail</div>
+            <p class="text-muted" style="max-width:560px; margin:0 auto; font-size:0.9rem;">
+                Each AWS service was chosen to solve a specific platform requirement. Here's what each one does
+                and why it was the right choice.
+            </p>
+        </div>
+
+        <div class="row">
+
+            <!-- EC2 -->
+            <div class="col-12 col-lg-6">
+                <div class="service-card card">
+                    <div class="card-header">
+                        <i class="fa fa-server service-icon"></i>
+                        <div>
+                            <div class="aws-badge">AWS EC2</div>
+                            <h3>Elastic Compute Cloud</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="role-label">Role in the platform</div>
+                        <div class="role-text">API Server — the backbone of all platform operations</div>
+                        <p>
+                            EC2 hosts the Blurtopian REST API at <code>api.blurtopian.com</code>. Every action on the
+                            platform — submitting a contribution, triggering a moderation review, fetching project posts,
+                            loading moderator profiles — is handled by this API layer. EC2 was chosen for its flexibility
+                            to run a persistent, stateful Node.js API server with full control over networking and scaling.
+                        </p>
+                        <ul class="service-detail-list">
+                            <li>
+                                <span class="bullet">&#9654;</span>
+                                <span><strong>POST /api/posts/</strong> — accepts new contribution submissions from contributors</span>
+                            </li>
+                            <li>
+                                <span class="bullet">&#9654;</span>
+                                <span><strong>GET /api/posts/</strong> — returns paginated, filtered contributions per project (sorted by votes, date, or payout)</span>
+                            </li>
+                            <li>
+                                <span class="bullet">&#9654;</span>
+                                <span><strong>GET /api/stats</strong> — returns aggregated platform metrics: total authors rewarded, total rewards distributed, pending payouts</span>
+                            </li>
+                            <li>
+                                <span class="bullet">&#9654;</span>
+                                <span><strong>GET /api/moderators</strong> — returns moderator profiles with their pending and historical reward totals</span>
+                            </li>
+                            <li>
+                                <span class="bullet">&#9654;</span>
+                                <span>Connects to RDS PostgreSQL over a private VPC subnet for secure, low-latency database access</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RDS -->
+            <div class="col-12 col-lg-6">
+                <div class="service-card card">
+                    <div class="card-header">
+                        <i class="fa fa-database service-icon"></i>
+                        <div>
+                            <div class="aws-badge">AWS RDS</div>
+                            <h3>Relational Database Service</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="role-label">Role in the platform</div>
+                        <div class="role-text">PostgreSQL — all platform state and history</div>
+                        <p>
+                            RDS runs the PostgreSQL instance that stores every piece of platform data. Using a managed
+                            database service eliminates the operational overhead of patching, backups, and failover —
+                            critical for a platform where contributor reward records must never be lost. Multi-AZ
+                            deployment ensures high availability.
+                        </p>
+                        <ul class="service-detail-list">
+                            <li>
+                                <span class="bullet">&#9654;</span>
+                                <span><strong>Users table</strong> — contributor and moderator accounts, reputation scores, linked GitHub/Blurt usernames</span>
+                            </li>
+                            <li>
+                                <span class="bullet">&#9654;</span>
+                                <span><strong>Contributions table</strong> — all submitted work with type, project, status (pending / approved / rejected), timestamps</span>
+                            </li>
+                            <li>
+                                <span class="bullet">&#9654;</span>
+                                <span><strong>Moderation records</strong> — who reviewed each submission, decision, notes, and rule category applied</span>
+                            </li>
+                            <li>
+                                <span class="bullet">&#9654;</span>
+                                <span><strong>Rewards ledger</strong> — author payout amounts, curator shares, moderator allocations, payout dates</span>
+                            </li>
+                            <li>
+                                <span class="bullet">&#9654;</span>
+                                <span><strong>Projects table</strong> — configuration for each listed open source project, GitHub IDs, reward rules</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lambda -->
+            <div class="col-12 col-lg-6">
+                <div class="service-card card">
+                    <div class="card-header">
+                        <i class="fa fa-bolt service-icon"></i>
+                        <div>
+                            <div class="aws-badge">AWS Lambda</div>
+                            <h3>Serverless Analytics Pipeline</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="role-label">Role in the platform</div>
+                        <div class="role-text">Event-driven functions that power platform analytics and reward stats</div>
+                        <p>
+                            Lambda functions run on a scheduled basis and in response to platform events to compute
+                            aggregate statistics. Because these workloads are periodic and short-lived, Lambda is
+                            significantly more cost-efficient than running dedicated compute for analytics tasks.
+                        </p>
+                        <ul class="service-detail-list">
+                            <li>
+                                <span class="bullet">&#9654;</span>
+                                <span><strong>Stats aggregator</strong> — queries RDS to compute <code>total_paid_authors</code>, <code>total_paid_curators</code>, <code>total_pending_rewards</code>, <code>total_paid_rewards</code> and caches the results for the <code>/api/stats</code> endpoint</span>
+                            </li>
+                            <li>
+                                <span class="bullet">&#9654;</span>
+                                <span><strong>Moderator reward calculator</strong> — distributes 5% of contributor reward pool proportionally across active moderators based on review volume</span>
+                            </li>
+                            <li>
+                                <span class="bullet">&#9654;</span>
+                                <span><strong>Payout processor</strong> — monitors the Blurt blockchain for 7-day payout events and records finalized reward amounts back to RDS</span>
+                            </li>
+                            <li>
+                                <span class="bullet">&#9654;</span>
+                                <span><strong>Contribution quality scorer</strong> — runs validation rules against new submissions before they enter the moderation queue</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CloudFront -->
+            <div class="col-12 col-lg-6">
+                <div class="service-card card">
+                    <div class="card-header">
+                        <i class="fa fa-globe service-icon"></i>
+                        <div>
+                            <div class="aws-badge">AWS CloudFront</div>
+                            <h3>Content Delivery Network</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="role-label">Role in the platform</div>
+                        <div class="role-text">Global CDN — low-latency delivery for a worldwide contributor base</div>
+                        <p>
+                            Blurtopian serves contributors across the globe — Southeast Asia, Europe, Latin America,
+                            and beyond. CloudFront ensures that static assets (the Vue.js frontend, CSS, JavaScript,
+                            and project images) are delivered from the nearest edge location, keeping load times fast
+                            regardless of where contributors are located.
+                        </p>
+                        <ul class="service-detail-list">
+                            <li>
+                                <span class="bullet">&#9654;</span>
+                                <span><strong>Frontend caching</strong> — serves the blurtopian.com Vue.js SPA from edge nodes, reducing latency globally</span>
+                            </li>
+                            <li>
+                                <span class="bullet">&#9654;</span>
+                                <span><strong>API response caching</strong> — caches <code>/api/stats</code> and project listing responses to reduce EC2 load on high-traffic periods</span>
+                            </li>
+                            <li>
+                                <span class="bullet">&#9654;</span>
+                                <span><strong>Project image delivery</strong> — distributes project banner images and contributor avatars efficiently at scale</span>
+                            </li>
+                            <li>
+                                <span class="bullet">&#9654;</span>
+                                <span><strong>HTTPS termination</strong> — enforces HTTPS at the edge for all client traffic, with automatic certificate management via ACM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /.row -->
+    </div>
+</div>
+
+<!-- ═══════════════════════════ DATA FLOW ═══════════════════════════ -->
+<div id="data-flow">
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col-12 col-md-5 mb-5 mb-md-0">
+                <div class="section-label">End-to-End Journey</div>
+                <div class="section-title">How a Contribution Moves Through the Platform</div>
+                <p class="text-muted" style="font-size:0.9rem; line-height:1.7;">
+                    From the moment a contributor submits their work to the moment they receive a reward,
+                    every step passes through the AWS infrastructure. Here's the full journey.
+                </p>
+            </div>
+            <div class="col-12 col-md-7">
+
+                <div class="flow-step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                        <h5>Contributor submits work <span class="aws-tag">CloudFront</span></h5>
+                        <p>The contributor fills out a submission form on blurtopian.com. The page and its assets are served from the nearest CloudFront edge location.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                        <h5>API receives the submission <span class="aws-tag">EC2</span></h5>
+                        <p>The form data hits the EC2-hosted REST API at api.blurtopian.com. The API validates the payload, checks the contributor's account, and writes the submission to the database.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                        <h5>Submission stored and queued <span class="aws-tag">RDS</span></h5>
+                        <p>PostgreSQL on RDS records the contribution with status <code>pending</code>. The moderation queue is updated so an available moderator sees it next.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                        <h5>Moderator reviews and decides <span class="aws-tag">EC2</span> <span class="aws-tag">RDS</span></h5>
+                        <p>A moderator loads the queue via the API (EC2), reviews the work against category rules, and submits their decision. The result is written to the moderation records table in RDS.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-num">5</div>
+                    <div class="step-body">
+                        <h5>Analytics updated <span class="aws-tag">Lambda</span></h5>
+                        <p>An approval event triggers a Lambda function that recalculates platform-wide stats and updates the cached /api/stats response. A second function recalculates moderator reward shares.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-num">6</div>
+                    <div class="step-body">
+                        <h5>Reward distributed via Blurt blockchain</h5>
+                        <p>Approved contributions are published to the Blurt blockchain. After 7 days, the community's votes determine the final payout. Lambda monitors the blockchain and records the finalized amount back to RDS.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-num">7</div>
+                    <div class="step-body">
+                        <h5>Contributor redeems rewards</h5>
+                        <p>The contributor sees their earned BLURT in their wallet. The reward is traceable back through the full audit trail stored in RDS.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════ SUMMARY TABLE ═══════════════════════════ -->
+<div id="summary">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-label">Quick Reference</div>
+            <div class="section-title">AWS Services at a Glance</div>
+        </div>
+        <div class="table-responsive">
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th>Platform Area</th>
+                        <th>AWS Service</th>
+                        <th>What it does</th>
+                        <th>Why AWS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>REST API</td>
+                        <td><span class="service-pill">EC2</span></td>
+                        <td>Hosts api.blurtopian.com — contributions, moderation, rewards, moderator endpoints</td>
+                        <td>Full control over runtime, networking, and persistent connections to RDS and the Blurt blockchain node</td>
+                    </tr>
+                    <tr>
+                        <td>Database</td>
+                        <td><span class="service-pill">RDS PostgreSQL</span></td>
+                        <td>Stores all users, contributions, moderation decisions, and reward ledger</td>
+                        <td>Managed backups, Multi-AZ failover, and automated patching — no DBA overhead for a small team</td>
+                    </tr>
+                    <tr>
+                        <td>Analytics</td>
+                        <td><span class="service-pill">Lambda</span></td>
+                        <td>Aggregates platform stats, calculates moderator rewards, processes blockchain payout events</td>
+                        <td>Pay-per-invocation pricing is ideal for scheduled, short-lived analytics jobs with irregular traffic</td>
+                    </tr>
+                    <tr>
+                        <td>Content Delivery</td>
+                        <td><span class="service-pill">CloudFront</span></td>
+                        <td>Serves frontend, caches API responses, delivers project images globally</td>
+                        <td>Blurtopian's user base spans 5+ continents — edge caching is essential for acceptable load times</td>
+                    </tr>
+                    <tr>
+                        <td>Reward Distribution</td>
+                        <td>Blurt Blockchain</td>
+                        <td>Distributes BLURT tokens to approved contributors via community voting (Proof-of-Brain)</td>
+                        <td>Decentralized, transparent reward mechanism — no platform funds needed to pay contributors</td>
+                    </tr>
+                    <tr>
+                        <td>Contribution Verification</td>
+                        <td>GitHub API</td>
+                        <td>Verifies pull requests, forks, and contribution authenticity via git_archiver</td>
+                        <td>First-party verification source for open source contribution proof</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<div class="arch-footer">
+    <div class="container">
+        <div style="margin-bottom:12px;">
+            <span style="background:#232f3e; color:#ff9900; font-size:0.7rem; font-weight:700; padding:4px 12px; border-radius:4px; letter-spacing:0.08em;">&#9650; Built on AWS</span>
+        </div>
+        <div>
+            <a href="index.html">blurtopian.com</a>
+            &nbsp;·&nbsp;
+            <a href="https://github.com/blurtopian" target="_blank">GitHub</a>
+            &nbsp;·&nbsp;
+            <a href="https://api.blurtopian.com/api/stats" target="_blank">Live API Stats</a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/popper.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script>
+    // Scroll-shrink navbar (same behaviour as index.html)
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() > 60) {
+            $('#navbar').css({ 'background': 'rgba(37,37,37,0.97) !important', 'box-shadow': '0 2px 12px rgba(0,0,0,0.3)' });
+        }
+    });
+</script>
+
+</body>
+</html>
