@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Blurtopian - Rewarding Open Source Contributors</title>
+    <title>Blurtopian - The Open Source Contributor Platform</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="assets/img/favicon.ico">
@@ -47,6 +47,9 @@
                     <li class="nav-item">
                         <a class="nav-link smoothscroll" href="#blog">{{ trans('messages.nav.blog') }}</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="architecture.html" style="color:#ff9900;">Architecture</a>
+                    </li>
                 </ul>
                 <div class="text-right">
                     <div class="dropdown" id="language" v-if="langswitch">
@@ -70,9 +73,19 @@
 
     <div id="header">
         <div class="container" id="header-content">
-            <h3 class="text-white text-center" v-html="trans('messages.header.text1')"></h3>
+            <!-- <h3 class="text-white text-center" v-html="trans('messages.header.text1')"></h3> -->
             <h1 class="text-white text-center font-weight-bold text-uppercase" v-html="trans('messages.header.text2')"></h1>
             <h2 class="text-white text-center" v-html="trans('messages.header.text3')"></h2>
+            <div class="text-center mt-4">
+                <a href="https://register.blurt.buzz/?referral=eastmael" class="btn btn-primary btn-lg mr-2 font-weight-bold px-4">Get Started Free</a>
+                <a href="#projects" class="btn btn-outline-light btn-lg font-weight-bold px-4 smoothscroll">View Projects</a>
+            </div>
+            <p class="text-center mt-4" style="color: rgba(255,255,255,0.65); font-size: 0.8rem; letter-spacing: 0.05em;">
+                Free for contributors &nbsp;·&nbsp; Free for open source projects &nbsp;·&nbsp; No upfront cost
+            </p>
+            <p class="text-center mt-2" style="color: rgba(255,255,255,0.5); font-size: 0.75rem; letter-spacing: 0.05em;">
+                API layer on AWS EC2 &nbsp;·&nbsp; PostgreSQL on AWS RDS &nbsp;·&nbsp; Analytics on AWS Lambda &nbsp;·&nbsp; CDN via CloudFront
+            </p>
         </div>
         <div class="parallax-wave" id="wave-grey1"></div>
         <div class="parallax-wave" id="wave-grey2"></div>
@@ -84,6 +97,58 @@
         <!--<a href="#" class="play-video">-->
             <!--<i class="fa fa-play"></i>-->
         <!--</a>-->
+    </div>
+
+    <div id="stats-bar" class="py-4" style="background: #f8f9fa; border-top: 1px solid #e9ecef; border-bottom: 1px solid #e9ecef;">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-6 col-md-3 mb-3 mb-md-0">
+                    <div style="font-size: 1.8rem; font-weight: 700; color: #333;">
+                        <i class="fa fa-spin fa-spinner text-muted" v-if="rewards.authors == 0"></i>
+                        <span v-if="rewards.authors > 0">{{ rewards.authors | currency }}</span>
+                    </div>
+                    <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: #666;">Contributors Rewarded</div>
+                </div>
+                <div class="col-6 col-md-3 mb-3 mb-md-0">
+                    <div style="font-size: 1.8rem; font-weight: 700; color: #333;">5,000+</div>
+                    <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: #666;">Contributions Reviewed</div>
+                </div>
+                <div class="col-6 col-md-3 mb-3 mb-md-0">
+                    <div style="font-size: 1.8rem; font-weight: 700; color: #333;">7</div>
+                    <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: #666;">Open Source Projects</div>
+                </div>
+                <div class="col-6 col-md-3 mb-3 mb-md-0">
+                    <div style="font-size: 1.8rem; font-weight: 700; color: #333;">
+                        <i class="fa fa-spin fa-spinner text-muted" v-if="rewards.total == 0"></i>
+                        <span v-if="rewards.total > 0">{{ rewards.total | currency }} BLURT</span>
+                    </div>
+                    <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: #666;">Rewards Distributed</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="how-it-works" class="py-5">
+        <div class="container text-center">
+            <h3 class="mb-5 font-weight-bold">How It Works</h3>
+            <div class="row">
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">&#128196;</div>
+                    <h4 class="font-weight-bold text-uppercase">Submit</h4>
+                    <p class="text-muted">Contributors submit their open source work: code, docs, translations, bug reports, and more.</p>
+                </div>
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">&#9989;</div>
+                    <h4 class="font-weight-bold text-uppercase">Review</h4>
+                    <p class="text-muted">Our moderation API reviews every submission against quality standards before approval.</p>
+                </div>
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">&#127942;</div>
+                    <h4 class="font-weight-bold text-uppercase">Earn</h4>
+                    <p class="text-muted">Approved contributions earn rewards, funded by the project's community. No upfront cost to project owners.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="container lead" id="intro" v-html="trans('messages.intro')"></div>
@@ -333,6 +398,10 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="text-center mt-5">
+            <p class="text-muted mb-3" style="font-size: 0.9rem;">Listing your project on Blurtopian is free. Rewards are funded by your community — not you.</p>
+            <a href="mailto:blurtopian@gmail.com" class="btn btn-primary font-weight-bold px-4">List Your Project</a>
         </div>
     </div>
 
@@ -897,6 +966,9 @@
                 <a href="https://github.com/blurtopian" target="_blank">
                     <img src="assets/img/github2.png"/>
                 </a>
+            </div>
+            <div class="mt-2 mb-1">
+                <span style="display: inline-block; background: #232f3e; color: #ff9900; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; letter-spacing: 0.05em;">&#9650; Built on AWS</span>
             </div>
             blurtopian.com
         </div>
