@@ -1,52 +1,52 @@
 [
   {
-    "name": "Blurt.world",
-    "teaser": "The social application web front-end to the Blurt Blockchain",
-    "image": "https://res.cloudinary.com/dg5crljhv/image/upload/v1606118038/bloglogo_rr91nu.svg",
+    "name": "BlurtKey",
+    "teaser": "A Secure Mobile Wallet for Blurt",
+    "image": "assets/img/projects/blurtkey.png",
     "url": "https://blurtopian.com/project/blurtit/condenser/github/59213335/all",
     "github": {
-      "id": "59213335",
-      "url": "https://gitlab.com/blurt/openblurt/condenser"
+      "id": "2222222222",
+      "url": "https://github.com/blurtopian/blurtopian.github.io"
     }
   },
   {
-    "name": "Blurt.buzz",
-    "teaser": "Blockchain-based social network where anyone can earn rewards",
-    "image": "https://res.cloudinary.com/hpiynhbhq/image/upload/v1510052188/occhlvtqan2qafwhikbv.png",
-    "url": "https://blurtopian.com/project/busyorg/busy/github/64382195/all",
+    "name": "git_archiver",
+    "teaser": "Archive GitHub contributions on-chain — original Blurtopian tool",
+    "image": "https://res.cloudinary.com/dg5crljhv/image/upload/v1606118361/Banner4_Orange_465x300_ktqmkc.png",
+    "url": "https://blurtopian.com/project/blurtopian/blurtopian.com/github/104593314/all",
     "github": {
-      "id": "64382195",
-      "url": "https://github.com/busyorg/busy"
+      "id": "104593314",
+      "url": "https://github.com/blurtopian/git_archiver"
+    }
+  },
+  {
+    "name": "TruHack",
+    "teaser": "Decentralized hackathon platform — original Blurtopian tool",
+    "image": "https://res.cloudinary.com/dg5crljhv/image/upload/v1606118361/Banner4_Orange_465x300_ktqmkc.png",
+    "url": "https://blurtopian.com/project/blurtopian/blurtopian.com/github/104593314/all",
+    "github": {
+      "id": "104593314",
+      "url": "https://github.com/blurtopian/truhack"
+    }
+  },
+  {
+    "name": "Polls for Pi",
+    "teaser": "Incentivized polling for the Pi Network community",
+    "image": "assets/img/projects/polls-for-pi.png",
+    "url": "https://blurtopian.com/project/blurtit/condenser/github/59213335/all",
+    "github": {
+      "id": "1111111111",
+      "url": "https://github.com/pi-apps/polls-for-pi"
     }
   },
   {
     "name": "Blurtopian.com",
-    "teaser": "Open Source Economy powered by the Blurt blockchain",
+    "teaser": "The open source contributor rewards platform — contribute to the platform itself",
     "image": "https://res.cloudinary.com/dg5crljhv/image/upload/v1606118361/Banner4_Orange_465x300_ktqmkc.png",
     "url": "https://blurtopian.com/project/blurtopian/blurtopian.com/github/104593314/all",
     "github": {
       "id": "104593314",
       "url": "https://github.com/blurtopian/blurtopian.github.io"
-    }
-  },
-  {
-    "name": "Wordpress",
-    "teaser": "Most popular blogging platform and content management system.",
-    "image": "https://res.cloudinary.com/hpiynhbhq/image/upload/v1510151319/fgsq6dznr52ztmbxmxad.png",
-    "url": "https://blurtopian.com/project/WordPress/WordPress/github/2889328/all",
-    "github": {
-      "id": "2889328",
-      "url": "https://github.com/wordpress/wordpress"
-    }
-  },
-  {
-    "name": "D.Tube",
-    "teaser": "Blockchain-based social video platform where anyone can earn rewards",
-    "image": "https://res.cloudinary.com/hpiynhbhq/image/upload/v1510152015/a9dly7pdcwfgj4dr885n.png",
-    "url": "https://blurtopian.com/project/dtube/production/github/106749740/all",
-    "github": {
-      "id": "106749740",
-      "url": "https://github.com/dtube/production"
     }
   }
 ]
